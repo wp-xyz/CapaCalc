@@ -85,7 +85,8 @@ begin
     Capa := 4.0 * pi * eps0 * eps / (1.0/ra - 1.0/rb);
 
     if CbCapaUnits.Text='F' then
-      capaFmt := CapaExpFormat else
+      capaFmt := CapaExpFormat
+    else
       capaFmt := CapaStdFormat;
     capaUnits := CbCapaUnits.Items[CbCapaUnits.ItemIndex];
     areaUnits := CbAreaUnits.Items[CbAreaUnits.ItemIndex];
