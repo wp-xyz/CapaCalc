@@ -1,0 +1,125 @@
+object MainForm: TMainForm
+  Left = 391
+  Height = 460
+  Top = 242
+  Width = 778
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Capacitance calculator'
+  ClientHeight = 460
+  ClientWidth = 778
+  Icon.Data = {
+    FE0200000000010001002020100000000000E802000016000000280000002000
+    0000400000000100040000000000800200000000000000000000000000000000
+    0000000000000000800000800000008080008000000080008000808000008080
+    8000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+    FF00070000000000000000000000000070000700000000000000000000000000
+    7000070000666066666666666666000070000700064444444444444444446000
+    7000070006444444444444444444400070000700066664666666666666644000
+    7000070006EE44E6E6E6E6E6E6E440007000070006EEEEEEEEEEEEEEEEE64000
+    7000007776EEEEEEEEE00000000000000000000006EEEEEEEE06666666666666
+    6660000006EE88EEEE06666666666666666000000688EE888806670007000100
+    0660000006EEEEEEEE066877087708780660000006EEE6EEEE06687778777897
+    166000000066E0E6660668888888888886600000000000000006670007000700
+    0660000000000000000E6877087708770660000000000000000E687778777877
+    7660000000000000000E6888888888888660000000000000000E670007000700
+    0660000000000000000E6877087708770660000000000000000E687778777877
+    7660000000000000000E6888888888888660000000000000000E666666666666
+    6660000000000000000E66E66E6666666660000000000000000E660000080880
+    E660000000000000000866000088008066600000000000000008660008080880
+    E660000000000000000866666666666666600000000000000008666666666666
+    66600000000000000008888EEEEEEEEEEE600000000000000000000000000000
+    000FBFFFFFF7BFFFFFF7BC4000F7B8000077B8000077B8000077B8000077B800
+    0077C0000001F8000000F8000000F8000000F8000000F8000000FC400000FFFC
+    0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC
+    0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFE
+    0000
+  }
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '1.9.0.0'
+  object PageControl: TPageControl
+    Left = 4
+    Height = 416
+    Top = 4
+    Width = 770
+    ActivePage = PgParallel
+    Align = alClient
+    BorderSpacing.Around = 4
+    MultiLine = True
+    TabIndex = 7
+    TabOrder = 0
+    OnChange = PageControlChange
+    Options = [nboMultiLine]
+    object PgPlanar: TTabSheet
+      Caption = 'Parallel plate capacitor'
+    end
+    object PgSpherical: TTabSheet
+      Caption = 'Spherical capacitor'
+    end
+    object PgCylindrical: TTabSheet
+      Caption = 'Cylindrical capacitor'
+    end
+    object PgLinePlane: TTabSheet
+      Caption = 'Rectangular conductor and plane'
+    end
+    object PgCylPlane: TTabSheet
+      Caption = 'Cylinder and plane'
+    end
+    object Pg2Cyl: TTabSheet
+      Caption = '2 cylindrical lines'
+    end
+    object PgSeries: TTabSheet
+      Caption = 'Capacitors in series'
+    end
+    object PgParallel: TTabSheet
+      Caption = 'Capacitors in parallel'
+    end
+    object PgPNJunction: TTabSheet
+      Caption = 'p/n junction'
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 36
+    Top = 424
+    Width = 778
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 36
+    ClientWidth = 778
+    TabOrder = 1
+    object BtnCalculate: TButton
+      Left = 612
+      Height = 25
+      Top = 3
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Calculate'
+      Default = True
+      OnClick = BtnCalculateClick
+      TabOrder = 0
+    end
+    object BtnClose: TButton
+      Left = 695
+      Height = 25
+      Top = 3
+      Width = 75
+      Anchors = [akTop, akRight]
+      Cancel = True
+      Caption = 'Close'
+      OnClick = BtnCloseClick
+      TabOrder = 1
+    end
+    object LblAccuracy: TLabel
+      Left = 8
+      Height = 31
+      Top = -1
+      Width = 600
+      Anchors = [akLeft, akRight, akBottom]
+      AutoSize = False
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+end

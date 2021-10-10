@@ -1,0 +1,68 @@
+object BaseFrame: TBaseFrame
+  Left = 0
+  Height = 341
+  Top = 0
+  Width = 748
+  BorderSpacing.Around = 4
+  ClientHeight = 341
+  ClientWidth = 748
+  TabOrder = 0
+  DesignLeft = 295
+  DesignTop = 156
+  object ImagePanel: TPanel
+    Left = 0
+    Height = 341
+    Top = 0
+    Width = 280
+    Align = alLeft
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 341
+    ClientWidth = 280
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object EquationImage: TImage
+      Left = 2
+      Height = 49
+      Top = 290
+      Width = 276
+      Align = alBottom
+    end
+    object ImageBevel: TBevel
+      Left = 10
+      Height = 3
+      Top = 287
+      Width = 260
+      Align = alBottom
+      BorderSpacing.Left = 8
+      BorderSpacing.Right = 8
+      Shape = bsTopLine
+    end
+    object GeometryImage: TImage
+      Left = 2
+      Height = 285
+      Top = 2
+      Width = 276
+      Align = alClient
+    end
+  end
+  object Panel2: TPanel
+    Left = 284
+    Height = 341
+    Top = 0
+    Width = 464
+    Align = alClient
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    TabOrder = 1
+  end
+  object Bevel1: TBevel
+    Left = 280
+    Height = 341
+    Top = 0
+    Width = 4
+    Align = alLeft
+    Shape = bsSpacer
+  end
+end

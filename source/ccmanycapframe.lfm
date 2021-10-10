@@ -1,0 +1,344 @@
+inherited ManyCapFrame: TManyCapFrame
+  Height = 393
+  Width = 660
+  ClientHeight = 393
+  ClientWidth = 660
+  DesignLeft = 673
+  DesignTop = 299
+  inherited ImagePanel: TPanel
+    Height = 393
+    ClientHeight = 393
+    inherited EquationImage: TImage
+      Height = 82
+      Top = 309
+      Center = True
+    end
+    inherited ImageBevel: TBevel
+      Top = 306
+    end
+    inherited GeometryImage: TImage
+      Height = 304
+      Center = True
+    end
+  end
+  inherited Panel2: TPanel
+    Height = 393
+    Width = 376
+    ClientHeight = 393
+    ClientWidth = 376
+    object EdC1: TEdit[0]
+      AnchorSideTop.Control = Panel2
+      Left = 160
+      Height = 23
+      Top = 26
+      Width = 88
+      Alignment = taRightJustify
+      BorderSpacing.Top = 24
+      TabOrder = 0
+    end
+    object LblC1: TLabel[1]
+      AnchorSideTop.Control = EdC1
+      AnchorSideRight.Control = EdC1
+      Left = 134
+      Height = 15
+      Top = 30
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 12
+      Caption = 'C1'
+      ParentColor = False
+    end
+    object LblSameUnits: TLabel[2]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdC1
+      Left = 260
+      Height = 15
+      Top = 30
+      Width = 61
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 4
+      Caption = 'Same units!'
+      ParentColor = False
+    end
+    object LblC2: TLabel[3]
+      AnchorSideTop.Control = EdC2
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 61
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C2'
+      ParentColor = False
+    end
+    object EdC2: TEdit[4]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC1
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 57
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 1
+    end
+    object LblC3: TLabel[5]
+      AnchorSideTop.Control = EdC3
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 92
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C3'
+      ParentColor = False
+    end
+    object EdC3: TEdit[6]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC2
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 88
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 2
+    end
+    object LblC4: TLabel[7]
+      AnchorSideTop.Control = EdC4
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 123
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C4'
+      ParentColor = False
+    end
+    object EdC4: TEdit[8]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC3
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 119
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 3
+    end
+    object LblC5: TLabel[9]
+      AnchorSideTop.Control = EdC5
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 154
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C5'
+      ParentColor = False
+    end
+    object EdC5: TEdit[10]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC4
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 150
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 4
+    end
+    object LblC6: TLabel[11]
+      AnchorSideTop.Control = EdC6
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 185
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C6'
+      ParentColor = False
+    end
+    object EdC6: TEdit[12]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC5
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 181
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 5
+    end
+    object LblC7: TLabel[13]
+      AnchorSideTop.Control = EdC7
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 216
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C7'
+      ParentColor = False
+    end
+    object EdC7: TEdit[14]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC6
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 212
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 6
+    end
+    object LblC8: TLabel[15]
+      AnchorSideTop.Control = EdC8
+      AnchorSideRight.Control = LblC1
+      AnchorSideRight.Side = asrBottom
+      Left = 134
+      Height = 15
+      Top = 247
+      Width = 14
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'C8'
+      ParentColor = False
+    end
+    object EdC8: TEdit[16]
+      AnchorSideLeft.Control = EdC1
+      AnchorSideTop.Control = EdC7
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdC1
+      AnchorSideRight.Side = asrBottom
+      Left = 160
+      Height = 23
+      Top = 243
+      Width = 88
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      TabOrder = 7
+    end
+    object BtnClear: TButton[17]
+      AnchorSideLeft.Control = LblSameUnits
+      AnchorSideTop.Control = EdC8
+      Left = 260
+      Height = 25
+      Top = 243
+      Width = 75
+      Caption = 'Clear'
+      OnClick = BtnClearClick
+      TabOrder = 8
+    end
+    object Panel1: TPanel[18]
+      Left = 2
+      Height = 63
+      Top = 328
+      Width = 372
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 63
+      ClientWidth = 372
+      TabOrder = 9
+      object LblCapa: TLabel
+        AnchorSideTop.Control = TxtCapa
+        AnchorSideRight.Control = TxtCapa
+        Left = 83
+        Height = 15
+        Top = 24
+        Width = 113
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 12
+        Caption = 'Total capacitance (C)'
+        FocusControl = TxtCapa
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object TxtCapa: TEdit
+        AnchorSideTop.Control = Bevel3
+        AnchorSideBottom.Side = asrBottom
+        Left = 208
+        Height = 23
+        Top = 20
+        Width = 88
+        Alignment = taRightJustify
+        BorderSpacing.Top = 20
+        BorderSpacing.Bottom = 20
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object UpDown1: TUpDown
+        AnchorSideLeft.Control = TxtCapa
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = TxtCapa
+        AnchorSideTop.Side = asrCenter
+        AnchorSideBottom.Side = asrBottom
+        Left = 296
+        Height = 30
+        Top = 16
+        Width = 17
+        Min = 0
+        OnClick = UpDown1Click
+        Position = 0
+        TabOrder = 1
+        Wrap = False
+      end
+      object Bevel3: TBevel
+        Left = 16
+        Height = 2
+        Top = 0
+        Width = 340
+        Align = alTop
+        BorderSpacing.Left = 16
+        BorderSpacing.Right = 16
+        Shape = bsTopLine
+      end
+    end
+  end
+  inherited Bevel1: TBevel
+    Height = 393
+  end
+end

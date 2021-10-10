@@ -1,0 +1,610 @@
+inherited PNJunctionCapFrame: TPNJunctionCapFrame
+  Height = 408
+  Width = 809
+  ClientHeight = 408
+  ClientWidth = 809
+  DesignLeft = 428
+  DesignTop = 199
+  inherited ImagePanel: TPanel
+    Height = 408
+    Width = 28
+    ClientHeight = 408
+    ClientWidth = 28
+    Visible = False
+    inherited EquationImage: TImage
+      Top = 357
+      Width = 24
+    end
+    inherited ImageBevel: TBevel
+      Top = 354
+      Width = 8
+    end
+    inherited GeometryImage: TImage
+      Height = 352
+      Width = 24
+    end
+  end
+  inherited Panel2: TPanel
+    Left = 32
+    Height = 408
+    Width = 777
+    ClientHeight = 408
+    ClientWidth = 777
+    object EdTemp: TEdit[0]
+      AnchorSideTop.Control = Panel2
+      Left = 544
+      Height = 23
+      Top = 26
+      Width = 92
+      Alignment = taRightJustify
+      BorderSpacing.Top = 24
+      OnChange = DataChanged
+      TabOrder = 1
+    end
+    object CbMaterial: TComboBox[1]
+      AnchorSideTop.Control = Panel2
+      Left = 216
+      Height = 23
+      Top = 26
+      Width = 188
+      BorderSpacing.Top = 24
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'Silicon'
+        'GaAs'
+        'Germanium'
+        'InP'
+      )
+      OnChange = DataChanged
+      Style = csDropDownList
+      TabOrder = 0
+      Text = 'Silicon'
+    end
+    object LblMaterial: TLabel[2]
+      AnchorSideTop.Control = CbMaterial
+      AnchorSideRight.Control = CbMaterial
+      Left = 161
+      Height = 15
+      Top = 30
+      Width = 43
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 12
+      Caption = 'Material'
+      FocusControl = CbMaterial
+      ParentColor = False
+    end
+    object LblTemp: TLabel[3]
+      AnchorSideTop.Control = EdTemp
+      AnchorSideRight.Control = EdTemp
+      Left = 465
+      Height = 15
+      Top = 30
+      Width = 67
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 12
+      Caption = 'Temperature'
+      FocusControl = EdTemp
+      ParentColor = False
+    end
+    object CbTempUnits: TComboBox[4]
+      AnchorSideLeft.Control = EdTemp
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdTemp
+      Left = 648
+      Height = 23
+      Top = 26
+      Width = 64
+      BorderSpacing.Left = 12
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'K'
+        '°C'
+      )
+      OnChange = UnitsChanged
+      Style = csDropDownList
+      TabOrder = 2
+      Text = 'K'
+    end
+    object LblJctType: TLabel[5]
+      AnchorSideTop.Control = CbJctType
+      AnchorSideRight.Control = LblMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 133
+      Height = 15
+      Top = 61
+      Width = 71
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'Junction type'
+      FocusControl = CbJctType
+      ParentColor = False
+    end
+    object CbJctType: TComboBox[6]
+      AnchorSideLeft.Control = CbMaterial
+      AnchorSideTop.Control = CbMaterial
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = CbMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 216
+      Height = 23
+      Top = 57
+      Width = 188
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      ItemHeight = 15
+      ItemIndex = 0
+      Items.Strings = (
+        'abrupt'
+        'linearly-graded'
+      )
+      OnChange = CbJctTypeChange
+      Style = csDropDownList
+      TabOrder = 3
+      Text = 'abrupt'
+    end
+    object LblVoltage: TLabel[7]
+      AnchorSideTop.Control = EdVoltage
+      AnchorSideRight.Control = LblTemp
+      AnchorSideRight.Side = asrBottom
+      Left = 449
+      Height = 15
+      Top = 61
+      Width = 83
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'Applied voltage'
+      FocusControl = EdVoltage
+      ParentColor = False
+    end
+    object EdVoltage: TFloatSpinEdit[8]
+      AnchorSideLeft.Control = EdTemp
+      AnchorSideTop.Control = EdTemp
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = EdTemp
+      AnchorSideRight.Side = asrBottom
+      Left = 544
+      Height = 23
+      Top = 57
+      Width = 92
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      DecimalPlaces = 3
+      Increment = 0.1
+      MaxValue = 10000
+      MinValue = -10000
+      OnChange = DataChanged
+      TabOrder = 4
+      Value = 0
+    end
+    object LblVoltageUnits: TLabel[9]
+      AnchorSideLeft.Control = CbTempUnits
+      AnchorSideTop.Control = LblVoltage
+      Left = 648
+      Height = 15
+      Top = 61
+      Width = 7
+      Caption = 'V'
+      FocusControl = EdVoltage
+      ParentColor = False
+    end
+    object LblNa: TLabel[10]
+      AnchorSideTop.Control = EdNa
+      AnchorSideRight.Control = LblMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 53
+      Height = 15
+      Top = 92
+      Width = 151
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'Acceptor concentration (Na)'
+      FocusControl = EdNa
+      ParentColor = False
+    end
+    object EdNa: TEdit[11]
+      AnchorSideLeft.Control = CbMaterial
+      AnchorSideTop.Control = CbJctType
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Bevel2
+      Left = 216
+      Height = 23
+      Top = 88
+      Width = 104
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      OnChange = DataChanged
+      TabOrder = 5
+      Text = '1,00E+16'
+    end
+    object CbNaUnits: TComboBox[12]
+      AnchorSideLeft.Control = Bevel2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdNa
+      AnchorSideRight.Control = CbMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 332
+      Height = 23
+      Top = 88
+      Width = 72
+      Anchors = [akTop, akLeft, akRight]
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        '1/nm³'
+        '1/µm³'
+        '1/cm³'
+        '1/m³'
+      )
+      OnChange = UnitsChanged
+      Style = csDropDownList
+      TabOrder = 6
+      Text = '1/cm³'
+    end
+    object LblNd: TLabel[13]
+      AnchorSideTop.Control = EdNd
+      AnchorSideRight.Control = LblMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 67
+      Height = 15
+      Top = 123
+      Width = 137
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'Donor concentration (Nd)'
+      FocusControl = EdNd
+      ParentColor = False
+    end
+    object EdNd: TEdit[14]
+      AnchorSideLeft.Control = CbMaterial
+      AnchorSideTop.Control = EdNa
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Bevel2
+      Left = 216
+      Height = 23
+      Top = 119
+      Width = 104
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      OnChange = DataChanged
+      TabOrder = 7
+      Text = '1,00E+16'
+    end
+    object CbNdUnits: TComboBox[15]
+      AnchorSideLeft.Control = Bevel2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdNd
+      AnchorSideRight.Control = CbMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 332
+      Height = 23
+      Top = 119
+      Width = 72
+      Anchors = [akTop, akLeft, akRight]
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        '1/nm³'
+        '1/µm³'
+        '1/cm³'
+        '1/m³'
+      )
+      OnChange = UnitsChanged
+      Style = csDropDownList
+      TabOrder = 8
+      Text = '1/cm³'
+    end
+    object LblDeltaConc: TLabel[16]
+      AnchorSideTop.Control = EdDeltaConc
+      AnchorSideRight.Control = LblMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 43
+      Height = 15
+      Top = 154
+      Width = 161
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      BorderSpacing.Top = 4
+      Caption = 'Dopand concentration change'
+      FocusControl = EdDeltaConc
+      ParentColor = False
+      Visible = False
+    end
+    object EdDeltaConc: TEdit[17]
+      AnchorSideLeft.Control = CbMaterial
+      AnchorSideTop.Control = EdNd
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = Bevel2
+      Left = 216
+      Height = 23
+      Top = 150
+      Width = 104
+      Alignment = taRightJustify
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Top = 8
+      OnChange = DataChanged
+      TabOrder = 9
+      Text = '1,00E+16'
+      Visible = False
+    end
+    object CbDeltaConcUnits: TComboBox[18]
+      AnchorSideLeft.Control = Bevel2
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = EdDeltaConc
+      AnchorSideRight.Control = CbMaterial
+      AnchorSideRight.Side = asrBottom
+      Left = 332
+      Height = 23
+      Top = 150
+      Width = 72
+      Anchors = [akTop, akLeft, akRight]
+      ItemHeight = 15
+      ItemIndex = 2
+      Items.Strings = (
+        '1/nm³'
+        '1/µm³'
+        '1/cm³'
+        '1/m³'
+      )
+      OnChange = UnitsChanged
+      Style = csDropDownList
+      TabOrder = 10
+      Text = '1/cm³'
+      Visible = False
+    end
+    object LblDeltaConcPerMicron: TLabel[19]
+      AnchorSideLeft.Control = CbMaterial
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = LblDeltaConc
+      Left = 416
+      Height = 15
+      Top = 154
+      Width = 58
+      BorderSpacing.Left = 12
+      Caption = 'per micron'
+      FocusControl = EdDeltaConc
+      ParentColor = False
+      Visible = False
+    end
+    object Panel1: TPanel[20]
+      Left = 2
+      Height = 166
+      Top = 240
+      Width = 773
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 166
+      ClientWidth = 773
+      TabOrder = 11
+      object Bevel3: TBevel
+        Left = 16
+        Height = 2
+        Top = 0
+        Width = 741
+        Align = alTop
+        BorderSpacing.Left = 16
+        BorderSpacing.Right = 16
+        Shape = bsTopLine
+      end
+      object LblEMax: TLabel
+        AnchorSideTop.Control = TxtEMax
+        AnchorSideRight.Control = TxtEMax
+        Left = 124
+        Height = 15
+        Top = 28
+        Width = 80
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 12
+        Caption = 'Maximum field'
+        FocusControl = TxtEMax
+        ParentColor = False
+        ParentFont = False
+      end
+      object TxtEMax: TEdit
+        AnchorSideTop.Control = Bevel3
+        Left = 216
+        Height = 23
+        Top = 24
+        Width = 104
+        Alignment = taRightJustify
+        BorderSpacing.Top = 24
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+      object CbEMaxUnits: TComboBox
+        AnchorSideLeft.Control = TxtEMax
+        AnchorSideLeft.Side = asrBottom
+        AnchorSideTop.Control = TxtEMax
+        Left = 332
+        Height = 23
+        Top = 24
+        Width = 73
+        BorderSpacing.Left = 12
+        ItemHeight = 15
+        ItemIndex = 2
+        Items.Strings = (
+          'mV/nm'
+          'V/µm'
+          'kV/cm'
+          'MV/m'
+          'V/m'
+        )
+        OnChange = UnitsChanged
+        ParentFont = False
+        Style = csDropDownList
+        TabOrder = 1
+        Text = 'kV/cm'
+      end
+      object LblBuiltinVoltag: TLabel
+        AnchorSideTop.Control = TxtBuiltinVoltage
+        AnchorSideRight.Control = LblEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 123
+        Height = 15
+        Top = 59
+        Width = 81
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 4
+        Caption = 'Built-in voltage'
+        FocusControl = TxtBuiltinVoltage
+        ParentColor = False
+        ParentFont = False
+      end
+      object TxtBuiltinVoltage: TEdit
+        AnchorSideLeft.Control = TxtEMax
+        AnchorSideTop.Control = TxtEMax
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = TxtEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 216
+        Height = 23
+        Top = 55
+        Width = 104
+        Alignment = taRightJustify
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 8
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 2
+      end
+      object LblBuiltinVoltageUnits: TLabel
+        AnchorSideLeft.Control = CbEMaxUnits
+        AnchorSideTop.Control = TxtBuiltinVoltage
+        Left = 332
+        Height = 15
+        Top = 59
+        Width = 7
+        BorderSpacing.Top = 4
+        Caption = 'V'
+        FocusControl = EdVoltage
+        ParentColor = False
+      end
+      object LblDepletionWidth: TLabel
+        AnchorSideTop.Control = TxtDepletionWidth
+        AnchorSideRight.Control = LblEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 120
+        Height = 15
+        Top = 90
+        Width = 84
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 4
+        Caption = 'Depletion width'
+        FocusControl = TxtDepletionWidth
+        ParentColor = False
+      end
+      object TxtDepletionWidth: TEdit
+        AnchorSideLeft.Control = TxtEMax
+        AnchorSideTop.Control = TxtBuiltinVoltage
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = TxtEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 216
+        Height = 23
+        Top = 86
+        Width = 104
+        Alignment = taRightJustify
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 8
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object CbDepletionWidthUnits: TComboBox
+        AnchorSideLeft.Control = CbEMaxUnits
+        AnchorSideTop.Control = TxtDepletionWidth
+        Left = 332
+        Height = 23
+        Top = 86
+        Width = 73
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'nm'
+          'µm'
+          'cm'
+          'm'
+        )
+        OnChange = UnitsChanged
+        Style = csDropDownList
+        TabOrder = 4
+        Text = 'nm'
+      end
+      object LblBuiltinVoltag1: TLabel
+        AnchorSideTop.Control = TxtCapaPerArea
+        AnchorSideRight.Control = LblEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 89
+        Height = 15
+        Top = 121
+        Width = 115
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        BorderSpacing.Top = 4
+        Caption = 'Capacitance per area'
+        FocusControl = TxtCapaPerArea
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object TxtCapaPerArea: TEdit
+        AnchorSideLeft.Control = TxtEMax
+        AnchorSideTop.Control = TxtDepletionWidth
+        AnchorSideTop.Side = asrBottom
+        AnchorSideRight.Control = TxtEMax
+        AnchorSideRight.Side = asrBottom
+        Left = 216
+        Height = 23
+        Top = 117
+        Width = 104
+        Alignment = taRightJustify
+        Anchors = [akTop, akLeft, akRight]
+        BorderSpacing.Top = 8
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 5
+      end
+      object LblCapaPerAreaUnits: TLabel
+        AnchorSideLeft.Control = CbEMaxUnits
+        AnchorSideTop.Control = TxtCapaPerArea
+        Left = 332
+        Height = 15
+        Top = 121
+        Width = 39
+        BorderSpacing.Top = 4
+        Caption = 'nF/cm²'
+        FocusControl = EdVoltage
+        ParentColor = False
+      end
+    end
+    object Bevel2: TBevel[21]
+      Left = 320
+      Height = 152
+      Top = 80
+      Width = 12
+      Shape = bsSpacer
+    end
+  end
+  inherited Bevel1: TBevel
+    Left = 28
+    Height = 408
+    Visible = False
+  end
+end
