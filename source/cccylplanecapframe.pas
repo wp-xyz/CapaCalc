@@ -53,7 +53,7 @@ implementation
 {$R *.lfm}
 
 uses
-  ccGlobal, ccStrings;
+  ccGlobal;
 
 { TCylPlaneCapFrame }
 

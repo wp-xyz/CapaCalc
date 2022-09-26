@@ -53,7 +53,7 @@ type
     { private declarations }
   protected
     procedure ClearResults; override;
-    procedure SetEditLeft(AValue: Integer); override;
+    procedure SetEditLeft({%H-}AValue: Integer); override;
   public
     { public declarations }
     constructor Create(AOwner: TComponent); override;
@@ -243,16 +243,14 @@ var
   material : TMaterial;
   V0: extended;           // Built-in voltage
   W: extended;            // Junction width
-  W0: extended;           // junction width at V=0
   V: extended;            // applied voltage
-  Cj0: extended;          // junction capacitance at V=0
   Cj: extended;           // junction capacitance
   emax: extended;         // max field
   deltaConc: extended;    // concentration gradient
-  fv, fa, fL, fc: extended; // unit conversion factors for volume, area, length and capa
+  fa, fL, fc: extended;   // unit conversion factors for volume, area, length and capa
   fE, fCA, fCD, fdN: extended;  // ... max field, acceptor, donator concentration
   tmp1, tmp2 : extended;
-  params : array of extended;
+  params : array of extended = nil;
 begin
   FErrMsg := '';
   try

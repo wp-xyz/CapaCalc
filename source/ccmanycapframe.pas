@@ -59,7 +59,7 @@ implementation
 {$R *.lfm}
 
 uses
-  ccGlobal, ccStrings;
+  ccStrings;
 
 constructor TManyCapFrame.Create(AOwner: TComponent);
 begin

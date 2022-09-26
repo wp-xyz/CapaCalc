@@ -38,11 +38,11 @@ type
     procedure SetEditLeft(AValue: Integer); virtual;
   public
     { public declarations }
-    constructor Create(AOwner: TComponent); virtual;
+    constructor Create(AOwner: TComponent); override;
     procedure Calculate; virtual;
-    function ValidData(out AMsg: String; out AControl: TWinControl): Boolean; virtual;
-    procedure ReadFromIni(ini: TCustomIniFile); virtual;
-    procedure WriteToIni(ini: TCustomIniFile); virtual;
+    function ValidData(out {%H-}AMsg: String; out {%H-}AControl: TWinControl): Boolean; virtual;
+    procedure ReadFromIni({%H-}ini: TCustomIniFile); virtual;
+    procedure WriteToIni({%H-}ini: TCustomIniFile); virtual;
     property ControlDist: integer read FControlDist;
     property EditLeft: Integer read FEditLeft write SetEditLeft;
     property ErrMsg: String read FErrMsg;

@@ -53,7 +53,7 @@ implementation
 {$R *.lfm}
 
 uses
-  IniFiles, ccGlobal,
+  IniFiles,
   ccPlanarCapFrame, ccSphericalCapFrame, ccCylindricalCapFrame,
   ccLinePlaneCapFrame, ccCylPlaneCapFrame, cc2CylCapFrame,
   ccSeriesCapFrame, ccParallelCapFrame, ccPNJunctionCapFrame;

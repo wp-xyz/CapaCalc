@@ -73,6 +73,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Material'
+      Color = clDefault
       FocusControl = CbMaterial
       ParentColor = False
     end
@@ -88,6 +89,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Temperature'
+      Color = clDefault
       FocusControl = EdTemp
       ParentColor = False
     end
@@ -123,6 +125,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Junction type'
+      Color = clDefault
       FocusControl = CbJctType
       ParentColor = False
     end
@@ -161,6 +164,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Applied voltage'
+      Color = clDefault
       FocusControl = EdVoltage
       ParentColor = False
     end
@@ -183,7 +187,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       MinValue = -10000
       OnChange = DataChanged
       TabOrder = 4
-      Value = 0
     end
     object LblVoltageUnits: TLabel[9]
       AnchorSideLeft.Control = CbTempUnits
@@ -193,6 +196,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Top = 61
       Width = 7
       Caption = 'V'
+      Color = clDefault
       FocusControl = EdVoltage
       ParentColor = False
     end
@@ -208,6 +212,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Acceptor concentration (Na)'
+      Color = clDefault
       FocusControl = EdNa
       ParentColor = False
     end
@@ -263,6 +268,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Donor concentration (Nd)'
+      Color = clDefault
       FocusControl = EdNd
       ParentColor = False
     end
@@ -318,6 +324,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Dopand concentration change'
+      Color = clDefault
       FocusControl = EdDeltaConc
       ParentColor = False
       Visible = False
@@ -374,6 +381,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 58
       BorderSpacing.Left = 12
       Caption = 'per micron'
+      Color = clDefault
       FocusControl = EdDeltaConc
       ParentColor = False
       Visible = False
@@ -410,6 +418,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Maximum field'
+        Color = clDefault
         FocusControl = TxtEMax
         ParentColor = False
         ParentFont = False
@@ -462,6 +471,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Built-in voltage'
+        Color = clDefault
         FocusControl = TxtBuiltinVoltage
         ParentColor = False
         ParentFont = False
@@ -492,6 +502,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 7
         BorderSpacing.Top = 4
         Caption = 'V'
+        Color = clDefault
         FocusControl = EdVoltage
         ParentColor = False
       end
@@ -507,6 +518,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Depletion width'
+        Color = clDefault
         FocusControl = TxtDepletionWidth
         ParentColor = False
       end
@@ -558,6 +570,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
+        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -590,6 +603,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 39
         BorderSpacing.Top = 4
         Caption = 'nF/cm²'
+        Color = clDefault
         FocusControl = EdVoltage
         ParentColor = False
       end

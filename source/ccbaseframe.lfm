@@ -24,15 +24,16 @@ object BaseFrame: TBaseFrame
     TabOrder = 0
     object EquationImage: TImage
       Left = 2
-      Height = 49
-      Top = 290
+      Height = 71
+      Top = 268
       Width = 276
       Align = alBottom
+      Constraints.MinHeight = 71
     end
     object ImageBevel: TBevel
       Left = 10
       Height = 3
-      Top = 287
+      Top = 265
       Width = 260
       Align = alBottom
       BorderSpacing.Left = 8
@@ -41,7 +42,7 @@ object BaseFrame: TBaseFrame
     end
     object GeometryImage: TImage
       Left = 2
-      Height = 285
+      Height = 263
       Top = 2
       Width = 276
       Align = alClient
