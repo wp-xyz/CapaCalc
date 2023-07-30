@@ -34,9 +34,10 @@ object MainForm: TMainForm
     0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFE
     0000
   }
+  OnActivate = FormActivate
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  LCLVersion = '2.3.0.0'
+  LCLVersion = '3.99.0.0'
   object PageControl: TPageControl
     Left = 4
     Height = 416
@@ -117,7 +118,6 @@ object MainForm: TMainForm
       Width = 600
       Anchors = [akLeft, akRight, akBottom]
       AutoSize = False
-      Color = clDefault
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False

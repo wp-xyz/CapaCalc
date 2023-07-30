@@ -5,8 +5,8 @@ unit ccMain;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  ExtCtrls, StdCtrls,
+  LCLIntf, LCLType, Classes, SysUtils, FileUtil, Graphics,
+  Forms, Controls, Dialogs, ComCtrls, ExtCtrls, StdCtrls,
   ccBaseFrame;
 
 type
@@ -30,11 +30,13 @@ type
     PgParallel: TTabSheet;
     procedure BtnCloseClick(Sender: TObject);
     procedure BtnCalculateClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure FormCreate(Sender: TObject);
     procedure PageControlChange(Sender: TObject);
   private
     { private declarations }
+    FActivated: Boolean;
     procedure CalcCompleteHandler(Sender: TObject; AMsg: String; isOK: Boolean);
     procedure Calculate;
     function FindFrame(APage: TTabsheet): TBaseFrame;
@@ -68,11 +70,6 @@ end;
 
 { TMainForm }
 
-procedure TMainForm.BeforeRun;
-begin
-  ReadFromIni;
-end;
-
 procedure TMainForm.BtnCloseClick(Sender: TObject);
 begin
   Close;
@@ -81,6 +78,15 @@ end;
 procedure TMainForm.BtnCalculateClick(Sender: TObject);
 begin
   Calculate;
+end;
+
+procedure TMainForm.FormActivate(Sender: TObject);
+begin
+  if not FActivated then
+  begin
+    ReadFromIni;
+    FActivated := true;
+  end;
 end;
 
 procedure TMainForm.CalcCompleteHandler(Sender: TObject;
@@ -229,10 +235,29 @@ var
   ini: TCustomIniFile;
   frame: TBaseFrame;
   i: Integer;
+  L, T, W, H: Integer;
+  R: TRect;
   s: String;
 begin
   ini := CreateIni;
   try
+    T := ini.ReadInteger('MainForm', 'Top', Top);
+    L := ini.ReadInteger('MainForm', 'Left', Left);
+    W := ini.ReadInteger('Mainform', 'Width', Width);
+    H := ini.ReadInteger('MainForm', 'Height', Height);
+    R := Screen.WorkAreaRect;
+    if W > R.Width then W := R.Width;
+    if H > R.Height then H := R.Height;
+    if L < R.Left then L := R.Left;
+    if T < R.Top then T := R.Top;
+    if L + W > R.Right then L := R.Right - W - GetSystemMetrics(SM_CXSIZEFRAME);
+    if T + H > R.Bottom then T := R.Bottom - H - GetSystemMetrics(SM_CYCAPTION) - GetSystemMetrics(SM_CYSIZEFRAME);
+    SetBounds(L, T, W, H);
+
+    WindowState := wsNormal;
+    Application.ProcessMessages;
+    WindowState := TWindowState(ini.ReadInteger('MainForm', 'WindowState', 0));
+
     PageControl.TabIndex := 0;
     s := ini.ReadString('MainForm', 'Page', '');
     if s <> '' then
@@ -261,6 +286,12 @@ var
 begin
   ini := CreateIni;
   try
+    ini.WriteInteger('MainForm', 'Top', RestoredTop);
+    ini.WriteInteger('MainForm', 'Left', RestoredLeft);
+    ini.WriteInteger('MainForm', 'Width', RestoredWidth);
+    ini.WriteInteger('MainForm', 'Height', RestoredHeight);
+    ini.WriteInteger('MainForm', 'WindowState', Integer(WindowState));
+
     ini.WriteString('MainForm', 'Page', PageControl.Activepage.Caption);
     for i:=0 to PageControl.PageCount-1 do begin
       frame := FindFrame(PageControl.Pages[i]);
@@ -271,6 +302,11 @@ begin
   finally
     ini.Free;
   end;
+end;
+
+procedure TMainForm.BeforeRun;
+begin
+
 end;
 
 end.
