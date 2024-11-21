@@ -12,15 +12,15 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     ClientWidth = 28
     Visible = False
     inherited EquationImage: TImage
-      Top = 357
+      Top = 335
       Width = 24
     end
     inherited ImageBevel: TBevel
-      Top = 354
+      Top = 332
       Width = 8
     end
     inherited GeometryImage: TImage
-      Height = 352
+      Height = 330
       Width = 24
     end
   end
@@ -38,8 +38,8 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 92
       Alignment = taRightJustify
       BorderSpacing.Top = 24
-      OnChange = DataChanged
       TabOrder = 1
+      OnChange = DataChanged
     end
     object CbMaterial: TComboBox[1]
       AnchorSideTop.Control = Panel2
@@ -56,10 +56,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         'Germanium'
         'InP'
       )
-      OnChange = DataChanged
       Style = csDropDownList
       TabOrder = 0
       Text = 'Silicon'
+      OnChange = DataChanged
     end
     object LblMaterial: TLabel[2]
       AnchorSideTop.Control = CbMaterial
@@ -73,23 +73,21 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Material'
-      Color = clDefault
       FocusControl = CbMaterial
       ParentColor = False
     end
     object LblTemp: TLabel[3]
       AnchorSideTop.Control = EdTemp
       AnchorSideRight.Control = EdTemp
-      Left = 465
+      Left = 466
       Height = 15
       Top = 30
-      Width = 67
+      Width = 66
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Temperature'
-      Color = clDefault
       FocusControl = EdTemp
       ParentColor = False
     end
@@ -108,10 +106,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         'K'
         '°C'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 2
       Text = 'K'
+      OnChange = UnitsChanged
     end
     object LblJctType: TLabel[5]
       AnchorSideTop.Control = CbJctType
@@ -125,7 +123,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Junction type'
-      Color = clDefault
       FocusControl = CbJctType
       ParentColor = False
     end
@@ -147,10 +144,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         'abrupt'
         'linearly-graded'
       )
-      OnChange = CbJctTypeChange
       Style = csDropDownList
       TabOrder = 3
       Text = 'abrupt'
+      OnChange = CbJctTypeChange
     end
     object LblVoltage: TLabel[7]
       AnchorSideTop.Control = EdVoltage
@@ -164,7 +161,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Applied voltage'
-      Color = clDefault
       FocusControl = EdVoltage
       ParentColor = False
     end
@@ -185,8 +181,8 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Increment = 0.1
       MaxValue = 10000
       MinValue = -10000
-      OnChange = DataChanged
       TabOrder = 4
+      OnChange = DataChanged
     end
     object LblVoltageUnits: TLabel[9]
       AnchorSideLeft.Control = CbTempUnits
@@ -196,7 +192,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Top = 61
       Width = 7
       Caption = 'V'
-      Color = clDefault
       FocusControl = EdVoltage
       ParentColor = False
     end
@@ -212,7 +207,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Acceptor concentration (Na)'
-      Color = clDefault
       FocusControl = EdNa
       ParentColor = False
     end
@@ -228,9 +222,9 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 5
       Text = '1,00E+16'
+      OnChange = DataChanged
     end
     object CbNaUnits: TComboBox[12]
       AnchorSideLeft.Control = Bevel2
@@ -251,10 +245,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         '1/cm³'
         '1/m³'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 6
       Text = '1/cm³'
+      OnChange = UnitsChanged
     end
     object LblNd: TLabel[13]
       AnchorSideTop.Control = EdNd
@@ -268,7 +262,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Donor concentration (Nd)'
-      Color = clDefault
       FocusControl = EdNd
       ParentColor = False
     end
@@ -284,9 +277,9 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 7
       Text = '1,00E+16'
+      OnChange = DataChanged
     end
     object CbNdUnits: TComboBox[15]
       AnchorSideLeft.Control = Bevel2
@@ -307,10 +300,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         '1/cm³'
         '1/m³'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 8
       Text = '1/cm³'
+      OnChange = UnitsChanged
     end
     object LblDeltaConc: TLabel[16]
       AnchorSideTop.Control = EdDeltaConc
@@ -324,7 +317,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Dopand concentration change'
-      Color = clDefault
       FocusControl = EdDeltaConc
       ParentColor = False
       Visible = False
@@ -341,10 +333,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 9
       Text = '1,00E+16'
       Visible = False
+      OnChange = DataChanged
     end
     object CbDeltaConcUnits: TComboBox[18]
       AnchorSideLeft.Control = Bevel2
@@ -365,11 +357,11 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         '1/cm³'
         '1/m³'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 10
       Text = '1/cm³'
       Visible = False
+      OnChange = UnitsChanged
     end
     object LblDeltaConcPerMicron: TLabel[19]
       AnchorSideLeft.Control = CbMaterial
@@ -381,7 +373,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 58
       BorderSpacing.Left = 12
       Caption = 'per micron'
-      Color = clDefault
       FocusControl = EdDeltaConc
       ParentColor = False
       Visible = False
@@ -409,16 +400,15 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       object LblEMax: TLabel
         AnchorSideTop.Control = TxtEMax
         AnchorSideRight.Control = TxtEMax
-        Left = 124
+        Left = 123
         Height = 15
         Top = 28
-        Width = 80
+        Width = 81
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Maximum field'
-        Color = clDefault
         FocusControl = TxtEMax
         ParentColor = False
         ParentFont = False
@@ -453,11 +443,11 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
           'MV/m'
           'V/m'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 1
         Text = 'kV/cm'
+        OnChange = UnitsChanged
       end
       object LblBuiltinVoltag: TLabel
         AnchorSideTop.Control = TxtBuiltinVoltage
@@ -471,7 +461,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Built-in voltage'
-        Color = clDefault
         FocusControl = TxtBuiltinVoltage
         ParentColor = False
         ParentFont = False
@@ -502,7 +491,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 7
         BorderSpacing.Top = 4
         Caption = 'V'
-        Color = clDefault
         FocusControl = EdVoltage
         ParentColor = False
       end
@@ -518,7 +506,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Depletion width'
-        Color = clDefault
         FocusControl = TxtDepletionWidth
         ParentColor = False
       end
@@ -553,10 +540,10 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
           'cm'
           'm'
         )
-        OnChange = UnitsChanged
         Style = csDropDownList
         TabOrder = 4
         Text = 'nm'
+        OnChange = UnitsChanged
       end
       object LblBuiltinVoltag1: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
@@ -570,7 +557,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
-        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -589,6 +575,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
         ReadOnly = True
@@ -603,7 +590,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 39
         BorderSpacing.Top = 4
         Caption = 'nF/cm²'
-        Color = clDefault
         FocusControl = EdVoltage
         ParentColor = False
       end

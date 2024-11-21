@@ -7,7 +7,6 @@ inherited TwoCylCapFrame: TTwoCylCapFrame
     Height = 375
     ClientHeight = 375
     inherited EquationImage: TImage
-      Height = 71
       Top = 294
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C805000089504E47

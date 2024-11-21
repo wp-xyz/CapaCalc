@@ -466,8 +466,6 @@ begin
     CbDepletionWidthUnits.ItemIndex := -1;
 
   CbJctTypeChange(nil);
-
-  Calculate;
 end;
 
 procedure TPNJunctionCapFrame.SetEditLeft(AValue: Integer);

@@ -134,8 +134,6 @@ begin
       FEditArray[i].Clear;
   end;
   FDecimals := ini.ReadInteger(FIniKey, 'Decimals', FDecimals);
-
-  Calculate;
 end;
 
 procedure TManyCapFrame.SetEditLeft(AValue: Integer);

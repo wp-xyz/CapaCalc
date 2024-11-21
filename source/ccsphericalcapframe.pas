@@ -153,8 +153,6 @@ begin
   if (s <> '') then
     CbCapaUnits.ItemIndex := CbCapaUnits.Items.Indexof(s) else
     CbCapaUnits.ItemIndex := -1;
-
-  Calculate;
 end;
 
 procedure TSphericalCapFrame.SetEditLeft(AValue: Integer);

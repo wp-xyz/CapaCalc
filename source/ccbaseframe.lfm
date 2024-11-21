@@ -20,6 +20,7 @@ object BaseFrame: TBaseFrame
     ClientHeight = 341
     ClientWidth = 280
     Color = clWhite
+    ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object EquationImage: TImage

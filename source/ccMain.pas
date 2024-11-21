@@ -100,24 +100,13 @@ end;
 
 procedure TMainForm.Calculate;
 var
-  msg: String;
-  C: TWinControl;
   frame: TBaseFrame;
 begin
   frame := FindFrame(PageControl.ActivePage);
-  if frame = nil then
-    exit;
-
-  frame.OnCalcComplete := @CalcCompleteHandler;
-  if frame.ValidData(msg, C) then begin
-    frame.Calculate;
-    if frame.ErrMsg <> '' then
-      MessageDlg(frame.ErrMsg, mtError,[mbOK], 0);
-  end
-  else begin
-    LblAccuracy.Caption := '';
-    if C <> nil then C.SetFocus;
-    MessageDlg(msg, mtError, [mbOK], 0);
+  if Assigned(frame) then
+  begin
+    frame.OnCalcComplete := @CalcCompleteHandler;
+    frame.CheckAndCalculate;
   end;
 end;
 
@@ -146,88 +135,39 @@ begin
 end;
 
 procedure TMainForm.FormCreate(Sender: TObject);
-var
-  x: Integer;
 begin
-  x := lblAccuracy.Canvas.TextWidth('Line center-to-plane dist. (d)');
-
-  // before TPlanarCapFrame to avoid naming conflict
-  with TLinePlaneCapFrame.Create(self) do begin
-    EditLeft := x; // + 4*ControlDist;
-    Parent := PgLinePlane;
-    Align := alClient;
-  end;
-
-  with TPlanarCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgPlanar;
-    Align := alClient;
-  end;
-
-  with TCylindricalCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgCylindrical;
-    Align := alClient;
-  end;
-
-  // must be created after CylindricalCapFrame, otherwise naming conflict...
-  with TSphericalCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgSpherical;
-    Align := alClient;
-  end;
-
-  // before TCylPlaneCapFrame !
-  with TTwoCylCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := Pg2Cyl;
-    Align := alClient;
-  end;
-
-  with TCylPlaneCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgCylPlane;
-    Align := alClient;
-  end;
-
-  with TSeriesCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgSeries;
-    Align := alClient;
-  end;
-
-  with TParallelCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgParallel;
-    Align := alClient;
-  end;
-
-  with TPNJunctionCapFrame.Create(self) do begin
-    EditLeft := x + 4*ControlDist;
-    if Width > self.ClientWidth then
-      self.ClientWidth := Width;
-    Parent := PgPNJunction;
-    Align := alClient;
-  end;
+  // The frames will be created when the corresponding tab becomes active.
+  // We store the frame class to be created in the Tag of the TabSheet.
+  PgPlanar.Tag := {%H-}PtrUInt(TPlanarCapFrame);
+  PgLinePlane.Tag := {%H-}PtrUInt(TLinePlaneCapFrame);
+  PgCylindrical.Tag := {%H-}PtrUInt(TCylindricalCapFrame);
+  PgSpherical.Tag := {%H-}PtrUInt(TSphericalCapFrame);
+  Pg2Cyl.Tag := {%H-}PtrUInt(TTwoCylCapFrame);
+  PgCylPlane.Tag := {%H-}PtrUInt(TCylPlaneCapFrame);
+  PgSeries.Tag := {%H-}PtrUInt(TSeriesCapFrame);
+  PgParallel.Tag := {%H-}PtrUInt(TParallelCapFrame);
+  PgPNJunction.Tag := {%H-}PtrUInt(TPNJunctionCapFrame);
 end;
 
 procedure TMainForm.PageControlChange(Sender: TObject);
+var
+  frame: TBaseFrame;
+  x: Integer;
 begin
+  x := lblAccuracy.Canvas.TextWidth('Line center-to-plane dist. (d)');
   LblAccuracy.Caption := '';
+
+  frame := FindFrame(PageControl.ActivePage);
+  if frame = nil then
+    with {%H-}TBaseFrameClass(PageControl.ActivePage.Tag).Create(Self) do
+    begin
+      Name := '';
+      EditLeft := x + 4*ControlDist;
+      if Width > self.ClientWidth then
+        self.ClientWidth := Width;
+      Parent := PageControl.ActivePage;
+      Align := alClient;
+    end;
 end;
 
 procedure TMainForm.ReadFromIni;
@@ -261,18 +201,26 @@ begin
     PageControl.TabIndex := 0;
     s := ini.ReadString('MainForm', 'Page', '');
     if s <> '' then
+    begin
       for i:=0 to PageControl.PageCount-1 do
         if s = PageControl.Pages[i].Caption then begin
           PageControl.ActivePage := PageControl.Pages[i];
           break;
         end;
+      PageControlChange(nil);
+    end;
 
     for i:=0 to PageControl.PageCount-1 do
     begin
       frame := FindFrame(PageControl.Pages[i]);
       if frame <> nil then
-        frame.ReadfromIni(ini);
+      begin
+        frame.ReadFromIni(ini);
+        if i = Pagecontrol.ActivePageIndex then
+          frame.CheckAndCalculate;
+      end;
     end;
+
   finally
     ini.Free;
   end;

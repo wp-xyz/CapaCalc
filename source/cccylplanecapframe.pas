@@ -5,7 +5,8 @@ unit ccCylPlaneCapFrame;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, ExtCtrls, StdCtrls, IniFiles,
+  Classes, SysUtils, Math, FileUtil,
+  Forms, Controls, ExtCtrls, StdCtrls, IniFiles,
   ccBaseFrame;
 
 type
@@ -53,7 +54,7 @@ implementation
 {$R *.lfm}
 
 uses
-  ccGlobal;
+  ccGlobal, ccStrings;
 
 { TCylPlaneCapFrame }
 
@@ -99,11 +100,19 @@ begin
     capaUnits := CbCapaUnits.Items[CbCapaUnits.ItemIndex];
     lengthUnits := CbLengthUnits.Items[CbLengthUnits.ItemIndex];
 
-    // Capacitance
-    TxtCapa.Text := FormatFloat(capaFmt, capa / fc);
-    // Capacitance per length
+    // Results
     TxtCapaPerLengthUnits.caption := Format('%s/%s', [capaUnits, lengthUnits]);
-    TxtCapaPerLength.Text := FormatFloat(CapaPerLengthFormat, capa / L * fL / fC);
+    if IsNaN(capa) then
+    begin
+      TxtCapa.Text := 'Error';
+      TxtCapaPerLength.Text := 'Error';
+    end else
+    begin
+    // Capacitance
+      TxtCapa.Text := FormatFloat(capaFmt, capa / fc);
+      // Capacitance per length
+      TxtCapaPerLength.Text := FormatFloat(CapaPerLengthFormat, capa / L * fL / fC);
+    end;
   except
     ClearResults;
   end;
@@ -168,8 +177,6 @@ begin
   if (s <> '') then
     CbCapaUnits.ItemIndex := CbCapaUnits.Items.Indexof(s) else
     CbCapaUnits.ItemIndex := -1;
-
-  Calculate;
 end;
 
 procedure TCylPlaneCapFrame.SetEditLeft(AValue: Integer);
@@ -188,6 +195,8 @@ end;
 
 function TCylPlaneCapFrame.ValidData(out AMsg: String; out AControl: TWinControl
   ): Boolean;
+var
+  d, R: Extended;
 begin
   Result := false;
 
@@ -228,6 +237,22 @@ begin
 
   if not IsValidComboValue(CbCapaUnits, AMsg) then begin
     AControl := CbCapaUnits;
+    exit;
+  end;
+
+  R := StrToFloat(EdRadius.Text);
+  d := StrToFloat(EdDist.Text);
+  if (d/2 < R) or SameValue(d/2, R) then
+  begin
+    AControl := EdDist;
+    AMsg := SRadiusNotLargerThanHalfDistance;
+    exit;
+  end;
+
+  if (d + sqrt(d*d - R*R)) / R <= 0 then
+  begin
+    AControl := EdDist;
+    AMsg := SParameterError;
     exit;
   end;
 

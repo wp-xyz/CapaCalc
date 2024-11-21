@@ -34,23 +34,23 @@ object MainForm: TMainForm
     0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFC0000FFFE
     0000
   }
+  LCLVersion = '4.99.0.0'
   OnActivate = FormActivate
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  LCLVersion = '3.99.0.0'
   object PageControl: TPageControl
     Left = 4
     Height = 416
     Top = 4
     Width = 770
-    ActivePage = PgParallel
+    ActivePage = PgPNJunction
     Align = alClient
     BorderSpacing.Around = 4
     MultiLine = True
-    TabIndex = 7
+    Options = [nboMultiLine]
+    TabIndex = 8
     TabOrder = 0
     OnChange = PageControlChange
-    Options = [nboMultiLine]
     object PgPlanar: TTabSheet
       Caption = 'Parallel plate capacitor'
     end
@@ -97,8 +97,8 @@ object MainForm: TMainForm
       Anchors = [akTop, akRight]
       Caption = 'Calculate'
       Default = True
-      OnClick = BtnCalculateClick
       TabOrder = 0
+      OnClick = BtnCalculateClick
     end
     object BtnClose: TButton
       Left = 695
@@ -108,8 +108,8 @@ object MainForm: TMainForm
       Anchors = [akTop, akRight]
       Cancel = True
       Caption = 'Close'
-      OnClick = BtnCloseClick
       TabOrder = 1
+      OnClick = BtnCloseClick
     end
     object LblAccuracy: TLabel
       Left = 8

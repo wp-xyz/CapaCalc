@@ -10,8 +10,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
     ClientHeight = 340
     inherited EquationImage: TImage
       Left = 10
-      Height = 37
-      Top = 293
+      Top = 259
       Width = 260
       AutoSize = True
       BorderSpacing.Around = 8
@@ -41,10 +40,10 @@ inherited SphericalCapFrame: TSphericalCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 282
+      Top = 248
     end
     inherited GeometryImage: TImage
-      Height = 280
+      Height = 246
       Center = True
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869631609000089504E47
@@ -140,7 +139,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Inner radius (a)'
-      Color = clDefault
       FocusControl = EdRadiusA
       ParentColor = False
     end
@@ -152,9 +150,9 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 24
-      OnChange = DataChanged
       TabOrder = 0
       Text = '100'
+      OnChange = DataChanged
     end
     object LblRadiusB: TLabel[2]
       AnchorSideTop.Control = EdRadiusB
@@ -167,7 +165,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Outer radius (b)'
-      Color = clDefault
       FocusControl = EdRadiusB
       ParentColor = False
     end
@@ -184,9 +181,9 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 1
       Text = '200'
+      OnChange = DataChanged
     end
     object LblEps: TLabel[4]
       AnchorSideTop.Control = EdEps
@@ -199,7 +196,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Dielectric constant (k)'
-      Color = clDefault
       FocusControl = EdEps
       ParentColor = False
     end
@@ -216,9 +212,9 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 2
       Text = '4'
+      OnChange = DataChanged
     end
     object CbRadiusAUnits: TComboBox[6]
       AnchorSideLeft.Control = EdRadiusA
@@ -237,10 +233,10 @@ inherited SphericalCapFrame: TSphericalCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 3
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object CbRadiusBUnits: TComboBox[7]
       AnchorSideLeft.Control = CbRadiusAUnits
@@ -257,10 +253,10 @@ inherited SphericalCapFrame: TSphericalCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 4
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object Panel1: TPanel[8]
       Left = 2
@@ -303,11 +299,11 @@ inherited SphericalCapFrame: TSphericalCapFrame
           'cm²'
           'm²'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 1
         Text = 'nm²'
+        OnChange = UnitsChanged
       end
       object CbCapaUnits: TComboBox
         AnchorSideLeft.Control = CbAreaUnits
@@ -326,11 +322,11 @@ inherited SphericalCapFrame: TSphericalCapFrame
           'nF'
           'F'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 2
         Text = 'F'
+        OnChange = UnitsChanged
       end
       object TxtCapa: TEdit
         AnchorSideLeft.Control = TxtArea
@@ -361,7 +357,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance (C)'
-        Color = clDefault
         FocusControl = TxtCapa
         Font.Style = [fsBold]
         ParentColor = False
@@ -378,7 +373,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
-        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -397,6 +391,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
         ReadOnly = True
@@ -410,7 +405,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Top = 88
         Width = 60
         Caption = '                    '
-        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -427,7 +421,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Area'
-        Color = clDefault
         FocusControl = TxtArea
         ParentColor = False
         ParentFont = False

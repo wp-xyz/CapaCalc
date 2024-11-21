@@ -10,8 +10,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
     ClientHeight = 375
     inherited EquationImage: TImage
       Left = 10
-      Height = 34
-      Top = 331
+      Top = 294
       Width = 260
       AutoSize = True
       BorderSpacing.Around = 8
@@ -35,10 +34,10 @@ inherited PlanarCapFrame: TPlanarCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 320
+      Top = 283
     end
     inherited GeometryImage: TImage
-      Height = 318
+      Height = 281
       Center = True
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963191F000089504E47
@@ -307,9 +306,9 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 24
-      OnChange = DataChanged
       TabOrder = 0
       Text = '10'
+      OnChange = DataChanged
     end
     object EdLength: TEdit[1]
       AnchorSideLeft.Control = EdDist
@@ -321,9 +320,9 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 2
       Text = '100'
+      OnChange = DataChanged
     end
     object EdWidth: TEdit[2]
       AnchorSideLeft.Control = EdDist
@@ -335,9 +334,9 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 4
       Text = '100'
+      OnChange = DataChanged
     end
     object EdEps: TEdit[3]
       AnchorSideLeft.Control = EdDist
@@ -349,9 +348,9 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 6
       Text = '4'
+      OnChange = DataChanged
     end
     object LblDist: TLabel[4]
       AnchorSideTop.Control = EdDist
@@ -364,7 +363,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Plate distance (d)'
-      Color = clDefault
       FocusControl = EdDist
       ParentColor = False
     end
@@ -379,7 +377,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Plate length (L)'
-      Color = clDefault
       FocusControl = EdLength
       ParentColor = False
     end
@@ -394,7 +391,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Plate width (B)'
-      Color = clDefault
       FocusControl = EdWidth
       ParentColor = False
     end
@@ -409,7 +405,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Dielectric constant (k)'
-      Color = clDefault
       FocusControl = EdEps
       ParentColor = False
     end
@@ -430,10 +425,10 @@ inherited PlanarCapFrame: TPlanarCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 1
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object CbLengthUnits: TComboBox[9]
       AnchorSideLeft.Control = CbDistUnits
@@ -450,10 +445,10 @@ inherited PlanarCapFrame: TPlanarCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 3
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object CbWidthUnits: TComboBox[10]
       AnchorSideLeft.Control = CbLengthUnits
@@ -470,10 +465,10 @@ inherited PlanarCapFrame: TPlanarCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 5
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object Panel1: TPanel[11]
       AnchorSideRight.Side = asrBottom
@@ -507,7 +502,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Area'
-        Color = clDefault
         FocusControl = TxtArea
         ParentColor = False
         ParentFont = False
@@ -540,11 +534,11 @@ inherited PlanarCapFrame: TPlanarCapFrame
           'cm²'
           'm²'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 1
         Text = 'nm²'
+        OnChange = UnitsChanged
       end
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
@@ -557,7 +551,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Capacitance (C)'
-        Color = clDefault
         FocusControl = TxtCapa
         Font.Style = [fsBold]
         ParentColor = False
@@ -598,11 +591,11 @@ inherited PlanarCapFrame: TPlanarCapFrame
           'nF'
           'F'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 3
         Text = 'F'
+        OnChange = UnitsChanged
       end
       object LblCapaPerArea: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
@@ -615,7 +608,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
-        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -648,7 +640,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per length'
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False
@@ -665,6 +656,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Width = 88
         Alignment = taRightJustify
         BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
         ReadOnly = True
@@ -678,7 +670,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Top = 88
         Width = 60
         Caption = '                    '
-        Color = clDefault
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
         ParentColor = False
@@ -692,7 +683,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Top = 119
         Width = 60
         Caption = '                    '
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False

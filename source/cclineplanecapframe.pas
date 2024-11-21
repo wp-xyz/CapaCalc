@@ -134,11 +134,9 @@ begin
     CbHeightUnits.ItemIndex := CbHeightUnits.Items.IndexOf(s) else
     CbHeightUnits.ItemIndex := -1;
 
-  // This control are inherited but not used. It needs a good default values.
+  // This control is inherited but not used. It needs a good default values.
   // Otherwise it would not pass the validity check.
   CbAreaUnits.ItemIndex := 0;
-
-  Calculate;
 end;
 
 procedure TLinePlaneCapFrame.SetEditLeft(AValue: Integer);

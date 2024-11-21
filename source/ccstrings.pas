@@ -23,6 +23,7 @@ resourcestring
   STemperatureDependenceNotSupported = 'Temperature dependence of this material not supported.';
   STemperaturePositive = 'Temperature in Kelvin must be a positive number.';
   SVoltageMustBeSmallerThanBuiltIn = 'The applied voltage must be smaller then the built-in voltage (%f V)';
+  SParameterError = 'Parameter error';
 
 implementation
 

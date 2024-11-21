@@ -8,8 +8,7 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
     ClientHeight = 404
     inherited EquationImage: TImage
       Left = 10
-      Height = 64
-      Top = 330
+      Top = 323
       Width = 260
       AutoSize = True
       BorderSpacing.Around = 8
@@ -51,10 +50,10 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 319
+      Top = 312
     end
     inherited GeometryImage: TImage
-      Height = 317
+      Height = 310
       Center = True
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C81B000089504E47
@@ -300,7 +299,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Line center-to-plane dist. (d)'
-      Color = clDefault
       FocusControl = EdDist
       ParentColor = False
     end
@@ -315,7 +313,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Cylinder radius (r)'
-      Color = clDefault
       FocusControl = EdRadius
       ParentColor = False
     end
@@ -330,7 +327,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Length (L)'
-      Color = clDefault
       FocusControl = EdLength
       ParentColor = False
     end
@@ -345,7 +341,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Dielectric constant (k)'
-      Color = clDefault
       FocusControl = EdEps
       ParentColor = False
     end
@@ -362,9 +357,9 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 6
       Text = '4'
+      OnChange = DataChanged
     end
     object EdLength: TEdit[5]
       AnchorSideLeft.Control = EdDist
@@ -379,9 +374,9 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 4
       Text = '100'
+      OnChange = DataChanged
     end
     object EdRadius: TEdit[6]
       AnchorSideLeft.Control = EdDist
@@ -396,9 +391,9 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 2
       Text = '100'
+      OnChange = DataChanged
     end
     object EdDist: TEdit[7]
       AnchorSideTop.Control = Panel2
@@ -408,9 +403,9 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       Width = 88
       Alignment = taRightJustify
       BorderSpacing.Top = 24
-      OnChange = DataChanged
       TabOrder = 0
       Text = '10'
+      OnChange = DataChanged
     end
     object CbDistUnits: TComboBox[8]
       AnchorSideLeft.Control = EdDist
@@ -429,10 +424,10 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 1
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object CbRadiusUnits: TComboBox[9]
       AnchorSideLeft.Control = CbDistUnits
@@ -449,10 +444,10 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 3
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object CbLengthUnits: TComboBox[10]
       AnchorSideLeft.Control = CbRadiusUnits
@@ -469,10 +464,10 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 5
       Text = 'nm'
+      OnChange = UnitsChanged
     end
     object Panel1: TPanel[11]
       Left = 2
@@ -505,7 +500,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Capacitance (C)'
-        Color = clDefault
         Font.Style = [fsBold]
         ParentColor = False
         ParentFont = False
@@ -521,7 +515,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
         Caption = 'Capacitance per length'
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False
@@ -540,6 +533,7 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
         ReadOnly = True
@@ -553,7 +547,6 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
         Top = 55
         Width = 60
         Caption = '                    '
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False
@@ -578,11 +571,11 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
           'nF'
           'F'
         )
-        OnChange = UnitsChanged
         ParentFont = False
         Style = csDropDownList
         TabOrder = 1
         Text = 'F'
+        OnChange = UnitsChanged
       end
       object TxtCapa: TEdit
         AnchorSideTop.Control = Bevel3

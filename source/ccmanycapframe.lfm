@@ -47,7 +47,6 @@ inherited ManyCapFrame: TManyCapFrame
       BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'C1'
-      Color = clDefault
       ParentColor = False
     end
     object LblSameUnits: TLabel[2]
@@ -61,7 +60,6 @@ inherited ManyCapFrame: TManyCapFrame
       BorderSpacing.Left = 12
       BorderSpacing.Top = 4
       Caption = 'Same units!'
-      Color = clDefault
       ParentColor = False
     end
     object LblC2: TLabel[3]
@@ -75,7 +73,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C2'
-      Color = clDefault
       ParentColor = False
     end
     object EdC2: TEdit[4]
@@ -104,7 +101,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C3'
-      Color = clDefault
       ParentColor = False
     end
     object EdC3: TEdit[6]
@@ -133,7 +129,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C4'
-      Color = clDefault
       ParentColor = False
     end
     object EdC4: TEdit[8]
@@ -162,7 +157,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C5'
-      Color = clDefault
       ParentColor = False
     end
     object EdC5: TEdit[10]
@@ -191,7 +185,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C6'
-      Color = clDefault
       ParentColor = False
     end
     object EdC6: TEdit[12]
@@ -220,7 +213,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C7'
-      Color = clDefault
       ParentColor = False
     end
     object EdC7: TEdit[14]
@@ -249,7 +241,6 @@ inherited ManyCapFrame: TManyCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'C8'
-      Color = clDefault
       ParentColor = False
     end
     object EdC8: TEdit[16]
@@ -275,8 +266,8 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 243
       Width = 75
       Caption = 'Clear'
-      OnClick = BtnClearClick
       TabOrder = 8
+      OnClick = BtnClearClick
     end
     object Panel1: TPanel[18]
       Left = 2
@@ -299,7 +290,6 @@ inherited ManyCapFrame: TManyCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Total capacitance (C)'
-        Color = clDefault
         FocusControl = TxtCapa
         Font.Style = [fsBold]
         ParentColor = False
@@ -331,9 +321,9 @@ inherited ManyCapFrame: TManyCapFrame
         Top = 16
         Width = 17
         Min = 0
-        OnClick = UpDown1Click
         Position = 0
         TabOrder = 1
+        OnClick = UpDown1Click
       end
       object Bevel3: TBevel
         Left = 16

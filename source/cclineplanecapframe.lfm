@@ -12,8 +12,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
     ClientHeight = 435
     ClientWidth = 301
     inherited EquationImage: TImage
-      Height = 48
-      Top = 377
+      Top = 354
       Width = 281
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869635706000089504E47
@@ -71,11 +70,11 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 366
+      Top = 343
       Width = 281
     end
     inherited GeometryImage: TImage
-      Height = 364
+      Height = 341
       Width = 297
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963ED06000089504E47
@@ -169,8 +168,8 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       Left = 152
       Top = 150
       Anchors = [akTop, akLeft, akRight]
-      OnChange = DataChanged
       TabOrder = 8
+      OnChange = DataChanged
     end
     inherited LblDist: TLabel
       Left = 77
@@ -253,8 +252,8 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       end
       inherited CbCapaUnits: TComboBox
         Top = 22
-        OnChange = UnitsChanged
         TabOrder = 2
+        OnChange = UnitsChanged
       end
       inherited LblCapaPerArea: TLabel
         AnchorSideRight.Control = TxtCapaPerArea
@@ -271,6 +270,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         AnchorSideRight.Side = asrBottom
         Left = 192
         Top = 132
+        BorderSpacing.Bottom = 20
         TabStop = False
         Visible = False
       end
@@ -310,7 +310,6 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Conductor height (H)'
-      Color = clDefault
       FocusControl = EdHeight
       ParentColor = False
     end
@@ -327,9 +326,9 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       Alignment = taRightJustify
       Anchors = [akTop, akLeft, akRight]
       BorderSpacing.Top = 8
-      OnChange = DataChanged
       TabOrder = 6
       Text = '100'
+      OnChange = DataChanged
     end
     object CbHeightUnits: TComboBox[14]
       AnchorSideLeft.Control = CbDistUnits
@@ -346,10 +345,10 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         'cm'
         'm'
       )
-      OnChange = UnitsChanged
       Style = csDropDownList
       TabOrder = 7
       Text = 'nm'
+      OnChange = UnitsChanged
     end
   end
   inherited Bevel1: TBevel

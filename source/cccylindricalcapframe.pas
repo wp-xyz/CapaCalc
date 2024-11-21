@@ -118,15 +118,15 @@ begin
 
   s := ini.ReadString(FIniKey, 'Length', '');
   if (s <> '') and TryStrToFloat(s, value, fs) then
-    EdLength.Text := FloatToStr(value) else
+    EdLength.Text := FloatToStr(value)
+  else
     EdLength.Clear;
 
   s := ini.ReadString(FIniKey, 'Length units', '');
   if (s <> '') then
-    CbLengthUnits.ItemIndex := CbLengthUnits.Items.IndexOf(s) else
+    CbLengthUnits.ItemIndex := CbLengthUnits.Items.IndexOf(s)
+  else
     CbLengthUnits.ItemIndex := -1;
-
-  Calculate;
 end;
 
 procedure TcylindricalCapFrame.SetEditLeft(AValue: Integer);

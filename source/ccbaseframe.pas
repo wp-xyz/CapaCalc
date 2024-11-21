@@ -5,7 +5,8 @@ unit ccBaseFrame;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, ExtCtrls, StdCtrls, IniFiles;
+  Classes, SysUtils, FileUtil, IniFiles,
+  Forms, Controls, ExtCtrls, StdCtrls, Dialogs;
 
 type
 
@@ -40,6 +41,7 @@ type
     { public declarations }
     constructor Create(AOwner: TComponent); override;
     procedure Calculate; virtual;
+    procedure CheckAndCalculate;
     function ValidData(out {%H-}AMsg: String; out {%H-}AControl: TWinControl): Boolean; virtual;
     procedure ReadFromIni({%H-}ini: TCustomIniFile); virtual;
     procedure WriteToIni({%H-}ini: TCustomIniFile); virtual;
@@ -48,6 +50,9 @@ type
     property ErrMsg: String read FErrMsg;
     property OnCalcComplete: TCalcCompleteEvent read FOnCalcComplete write FOnCalcComplete;
   end;
+
+  TBaseFrameClass = class of TBaseFrame;
+
 
 implementation
 
@@ -64,6 +69,20 @@ end;
 
 procedure TBaseFrame.Calculate;
 begin
+end;
+
+procedure TBaseFrame.CheckAndCalculate;
+var
+  C: TWinControl = nil;
+begin
+  FErrMsg := '';
+  if ValidData(FErrMsg, C) then
+    Calculate;
+  if FErrMsg <> '' then
+  begin
+    if Assigned(C) and C.CanFocus then C.SetFocus;
+    MessageDlg(FErrMsg, mtError, [mbOK], 0);
+  end;
 end;
 
 procedure TBaseFrame.ClearResults;

@@ -9,12 +9,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
     Height = 373
     ClientHeight = 373
     inherited EquationImage: TImage
-      Left = 10
-      Height = 39
-      Top = 324
-      Width = 260
-      AutoSize = True
-      BorderSpacing.Around = 8
+      Top = 292
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963AD02000089504E47
         0D0A1A0A0000000D494844520000005B000000270802000000EFB4A374000000
@@ -42,10 +37,10 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 313
+      Top = 281
     end
     inherited GeometryImage: TImage
-      Height = 311
+      Height = 279
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C141000089504E47
         0D0A1A0A0000000D49484452000000E8000000E108020000004DC46EE7000000
@@ -640,6 +635,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Top = 8
+        BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
         ReadOnly = True
@@ -653,7 +649,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         Top = 119
         Width = 60
         Caption = '                    '
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False
@@ -671,7 +666,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Capacitance per length'
-        Color = clDefault
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
         ParentColor = False
@@ -690,7 +684,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       Anchors = [akTop, akRight]
       BorderSpacing.Top = 4
       Caption = 'Length (L)'
-      Color = clDefault
       FocusControl = EdLength
       ParentColor = False
     end

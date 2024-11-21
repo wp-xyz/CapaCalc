@@ -140,50 +140,57 @@ begin
 
   s := ini.ReadString(FIniKey, 'Dist', '');
   if (s <> '') and TryStrToFloat(s, value, fs) then
-    EdDist.Text := FloatToStr(value) else
+    EdDist.Text := FloatToStr(value)
+  else
     EdDist.Clear;
 
   s := ini.ReadString(FIniKey, 'Length', '');
   if (s <> '') and TryStrToFloat(s, value, fs) then
-    EdLength.Text := FloatToStr(value) else
+    EdLength.Text := FloatToStr(value)
+  else
     EdLength.Clear;
 
   s := ini.ReadString(FIniKey, 'Width', '');
   if (s <> '') and TryStrToFloat(s, value, fs) then
-    EdWidth.Text := FloatToStr(value) else
+    EdWidth.Text := FloatToStr(value)
+  else
     EdWidth.Clear;
 
   s := ini.ReadString(FIniKey, 'eps', '');
   if (s <> '') and TryStrToFloat(s, value, fs) then
-    EdEps.Text := FloatToStr(value) else
+    EdEps.Text := FloatToStr(value)
+  else
     EdEps.Clear;
 
   s := ini.ReadString(FIniKey, 'Dist units', '');
   if (s <> '') then
-    CbDistUnits.ItemIndex := CbDistUnits.Items.IndexOf(s) else
+    CbDistUnits.ItemIndex := CbDistUnits.Items.IndexOf(s)
+  else
     CbDistUnits.ItemIndex := -1;
 
   s := ini.ReadString(FIniKey, 'Length units', '');
   if (s <> '') then
-    CbLengthUnits.ItemIndex := CbLengthUnits.Items.IndexOf(s) else
+    CbLengthUnits.ItemIndex := CbLengthUnits.Items.IndexOf(s)
+  else
     CbLengthUnits.ItemIndex := -1;
 
   s := ini.ReadString(FIniKey, 'Width units', '');
   if (s <> '') then
-    CbWidthUnits.ItemIndex := CbWidthUnits.Items.IndexOf(s) else
+    CbWidthUnits.ItemIndex := CbWidthUnits.Items.IndexOf(s)
+  else
     CbWidthUnits.ItemIndex := -1;
 
   s := ini.ReadString(FIniKey, 'Area units', '');
   if (s <> '') then
-    CbAreaUnits.ItemIndex := CbAreaUnits.Items.IndexOf(s) else
+    CbAreaUnits.ItemIndex := CbAreaUnits.Items.IndexOf(s)
+  else
     CbAreaUnits.ItemIndex := -1;
 
   s := ini.ReadString(FIniKey, 'Capa units', '');
   if (s <> '') then
-    CbCapaUnits.ItemIndex := CbCapaUnits.Items.Indexof(s) else
+    CbCapaUnits.ItemIndex := CbCapaUnits.Items.Indexof(s)
+  else
     CbCapaUnits.ItemIndex := -1;
-
-  Calculate;
 end;
 
 procedure TPlanarCapFrame.SetEditLeft(AValue: Integer);
