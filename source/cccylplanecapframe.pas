@@ -185,10 +185,9 @@ begin
   inherited;
 
   EdDist.Left := FEditLeft;
-  TxtCapa.Left := FEditLeft;
+  TxtCapa.BorderSpacing.Left := FEditLeft;
   TxtCapa.Width := EdDist.Width;
-
-  Panel1.Height := TxtCapaPerLength.Top + TxtCapaPerLength.Height + TxtCapa.Top;
+  Panel1.AutoSize := true;
 
   Width := CbDistUnits.Left + CbDistUnits.Width + 2*FControlDist;
 end;

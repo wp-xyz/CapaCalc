@@ -74,11 +74,12 @@ begin
     fa := AreaFactor[TAreaUnits(CbAreaUnits.ItemIndex)];
     fc := CapaFactor[TCapaUnits(CbCapaUnits.ItemIndex)];
 
-    A := pi * (ra + rb) * L;
+    A := pi * (ra + rb) * L;          // Why not (ra + rb)/2 ?
     Capa := TwoPi * eps0 * eps * L / ln(rb / ra);
 
     if CbCapaUnits.Text='F' then
-      capaFmt := CapaExpFormat else
+      capaFmt := CapaExpFormat
+    else
       capaFmt := CapaStdFormat;
     capaUnits := CbCapaUnits.Items[CbCapaUnits.ItemIndex];
     areaUnits := CbAreaUnits.Items[CbAreaUnits.ItemIndex];
@@ -129,11 +130,12 @@ begin
     CbLengthUnits.ItemIndex := -1;
 end;
 
-procedure TcylindricalCapFrame.SetEditLeft(AValue: Integer);
+procedure TCylindricalCapFrame.SetEditLeft(AValue: Integer);
 begin
   if AValue = FEditLeft then exit;
   inherited;
-  Panel1. Height := TxtCapaPerLength.Top + TxtCapaPerLength.Height + TxtArea.Top;
+  TxtArea.BorderSpacing.Left := FEditleft;
+  Panel1.AutoSize := true;
 end;
 
 function TCylindricalCapFrame.ValidData(out AMsg: String; out AControl: TWinControl

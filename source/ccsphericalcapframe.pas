@@ -161,10 +161,12 @@ begin
   inherited;
 
   EdRadiusA.Left := FEditLeft;
-  TxtArea.Left := FEditLeft;
+  TxtArea.BorderSpacing.Left := FEditLeft;
+  Panel1.AutoSize := true;
+//  TxtArea.Left := FEditLeft;
   TxtArea.Width := EdRadiusA.Width;
 
-  Panel1.Height := TxtCapaPerArea.Top + TxtCapaPerArea.Height + TxtArea.Top;
+  //Panel1.Height := TxtCapaPerArea.Top + TxtCapaPerArea.Height + TxtArea.Top;
   Width := CbRadiusAUnits.Left + CbRadiusAUnits.Width + 2*FControlDist;
 end;
 

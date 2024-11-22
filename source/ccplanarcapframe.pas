@@ -199,9 +199,11 @@ begin
   inherited;
 
   EdDist.Left := FEditLeft;
-  TxtArea.Left := FEditLeft;
+  TxtArea.BorderSpacing.Left := FEditLeft;
+  Panel1.AutoSize := true;
+//  TxtArea.Left := FEditLeft;
 
-  panel1.Height := TxtCapaPerLength.Top + TxtCapaPerLength.Height + TxtArea.Top;
+//  panel1.Height := TxtCapaPerLength.Top + TxtCapaPerLength.Height + TxtArea.Top;
 
   Width := CbDistUnits.Left + CbDistUnits.Width + 2*FControlDist;
 end;

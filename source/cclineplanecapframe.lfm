@@ -3,8 +3,8 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
   Width = 663
   ClientHeight = 435
   ClientWidth = 663
-  DesignLeft = 734
-  DesignTop = 155
+  DesignLeft = 840
+  DesignTop = 166
   inherited ImagePanel: TPanel
     Height = 435
     Width = 301
@@ -204,10 +204,10 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       OnChange = UnitsChanged
     end
     inherited Panel1: TPanel
-      Height = 209
-      Top = 224
+      Height = 170
+      Top = 263
       Width = 354
-      ClientHeight = 209
+      ClientHeight = 170
       ClientWidth = 354
       TabOrder = 9
       inherited Bevel3: TBevel
@@ -216,41 +216,46 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       inherited LblArea: TLabel
         AnchorSideRight.Control = TxtArea
         AnchorSideRight.Side = asrTop
-        Left = 156
-        Top = 104
+        Left = 132
+        Top = 100
         BorderSpacing.Right = 12
         Visible = False
       end
       inherited TxtArea: TEdit
-        AnchorSideTop.Control = nil
-        Left = 192
-        Top = 100
-        Width = 80
+        AnchorSideLeft.Control = TxtCapa
+        AnchorSideTop.Control = TxtCapaPerLength
+        Left = 168
+        Top = 96
         TabStop = False
         Visible = False
       end
       inherited CbAreaUnits: TComboBox
         AnchorSideLeft.Control = TxtArea
         AnchorSideLeft.Side = asrBottom
-        Left = 284
-        Top = 100
+        Left = 268
+        Top = 96
         BorderSpacing.Left = 12
         TabOrder = 5
         TabStop = False
         Visible = False
       end
       inherited LblCapa: TLabel
+        AnchorSideRight.Control = LblCapaPerLength
+        AnchorSideRight.Side = asrBottom
+        Left = 72
         Top = 26
       end
       inherited TxtCapa: TEdit
         AnchorSideLeft.Control = nil
         AnchorSideTop.Control = Bevel3
         AnchorSideRight.Control = nil
+        Left = 168
         Top = 22
         BorderSpacing.Top = 20
         TabOrder = 1
       end
       inherited CbCapaUnits: TComboBox
+        Left = 268
         Top = 22
         TabOrder = 2
         OnChange = UnitsChanged
@@ -258,30 +263,34 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       inherited LblCapaPerArea: TLabel
         AnchorSideRight.Control = TxtCapaPerArea
         AnchorSideRight.Side = asrTop
-        Left = 65
-        Top = 136
+        Left = 41
+        Top = 131
         BorderSpacing.Right = 12
         Visible = False
       end
       inherited TxtCapaPerArea: TEdit
-        AnchorSideLeft.Control = nil
-        AnchorSideTop.Control = nil
+        AnchorSideTop.Control = TxtArea
         AnchorSideRight.Control = nil
         AnchorSideRight.Side = asrBottom
-        Left = 192
-        Top = 132
+        Left = 168
+        Top = 127
         BorderSpacing.Bottom = 20
         TabStop = False
         Visible = False
       end
       inherited LblCapaPerLength: TLabel
+        AnchorSideRight.Control = TxtCapaPerLength
+        AnchorSideRight.Side = asrTop
+        Left = 29
         Top = 57
+        BorderSpacing.Right = 12
       end
       inherited TxtCapaPerLength: TEdit
         AnchorSideLeft.Control = TxtCapa
         AnchorSideTop.Control = TxtCapa
         AnchorSideRight.Control = TxtCapa
         AnchorSideRight.Side = asrBottom
+        Left = 168
         Top = 53
         Anchors = [akTop, akLeft, akRight]
         TabOrder = 3
@@ -289,12 +298,13 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       inherited TxtCapaPerAreaUnits: TLabel
         AnchorSideLeft.Control = TxtCapaPerArea
         AnchorSideLeft.Side = asrBottom
-        Left = 292
-        Top = 136
+        Left = 268
+        Top = 131
         BorderSpacing.Left = 12
         Visible = False
       end
       inherited TxtCapaPerLengthUnits: TLabel
+        Left = 268
         Top = 57
       end
     end

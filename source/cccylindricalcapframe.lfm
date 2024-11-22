@@ -1,15 +1,15 @@
 inherited CylindricalCapFrame: TCylindricalCapFrame
-  Height = 373
+  Height = 364
   Width = 687
-  ClientHeight = 373
+  ClientHeight = 364
   ClientWidth = 687
   DesignLeft = 419
   DesignTop = 245
   inherited ImagePanel: TPanel
-    Height = 373
-    ClientHeight = 373
+    Height = 364
+    ClientHeight = 364
     inherited EquationImage: TImage
-      Top = 292
+      Top = 283
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963AD02000089504E47
         0D0A1A0A0000000D494844520000005B000000270802000000EFB4A374000000
@@ -37,10 +37,10 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 281
+      Top = 272
     end
     inherited GeometryImage: TImage
-      Height = 279
+      Height = 270
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963C141000089504E47
         0D0A1A0A0000000D49484452000000E8000000E108020000004DC46EE7000000
@@ -573,10 +573,10 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
     end
   end
   inherited Panel2: TPanel
-    Height = 373
+    Height = 364
     Width = 403
     Anchors = [akTop, akRight, akBottom]
-    ClientHeight = 373
+    ClientHeight = 364
     ClientWidth = 403
     inherited LblEps: TLabel
       Top = 123
@@ -586,38 +586,16 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       Top = 119
     end
     inherited Panel1: TPanel
-      Height = 180
-      Top = 191
+      Height = 158
+      Top = 204
       Width = 399
-      ClientHeight = 180
+      ClientHeight = 158
       ClientWidth = 399
-      inherited TxtArea: TEdit
-        Left = 208
-      end
-      inherited CbAreaUnits: TComboBox
-        Left = 308
-      end
-      inherited CbCapaUnits: TComboBox
-        Left = 308
-      end
-      inherited TxtCapa: TEdit
-        Left = 208
-      end
       inherited LblCapa: TLabel
         AnchorSideLeft.Side = asrBottom
-        Left = 112
-      end
-      inherited LblCapaPerArea: TLabel
-        Left = 81
-      end
-      inherited TxtCapaPerArea: TEdit
-        Left = 208
-      end
-      inherited TxtCapaPerAreaUnits: TLabel
-        Left = 308
       end
       inherited LblArea: TLabel
-        Left = 172
+        BorderSpacing.Left = 200
       end
       inherited Bevel3: TBevel
         Width = 367
@@ -628,7 +606,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         AnchorSideTop.Side = asrBottom
         AnchorSideRight.Control = TxtArea
         AnchorSideRight.Side = asrBottom
-        Left = 208
+        Left = 200
         Height = 23
         Top = 115
         Width = 88
@@ -644,7 +622,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       object TxtCapaPerLengthUnits: TLabel[11]
         AnchorSideLeft.Control = CbAreaUnits
         AnchorSideTop.Control = LblCapaPerLength
-        Left = 308
+        Left = 300
         Height = 15
         Top = 119
         Width = 60
@@ -656,15 +634,15 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       end
       object LblCapaPerLength: TLabel[12]
         AnchorSideTop.Control = TxtCapaPerLength
-        AnchorSideRight.Control = TxtArea
-        Left = 69
+        AnchorSideRight.Control = LblCapa
+        AnchorSideRight.Side = asrBottom
+        Left = 61
         Height = 15
         Top = 119
         Width = 127
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
-        BorderSpacing.Right = 12
         Caption = 'Capacitance per length'
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
@@ -724,6 +702,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
     end
   end
   inherited Bevel1: TBevel
-    Height = 373
+    Height = 364
   end
 end

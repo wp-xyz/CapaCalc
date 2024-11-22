@@ -399,7 +399,8 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       end
       object LblEMax: TLabel
         AnchorSideTop.Control = TxtEMax
-        AnchorSideRight.Control = TxtEMax
+        AnchorSideRight.Control = LblBuiltinVoltage
+        AnchorSideRight.Side = asrBottom
         Left = 123
         Height = 15
         Top = 28
@@ -407,7 +408,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
-        BorderSpacing.Right = 12
         Caption = 'Maximum field'
         FocusControl = TxtEMax
         ParentColor = False
@@ -449,10 +449,9 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Text = 'kV/cm'
         OnChange = UnitsChanged
       end
-      object LblBuiltinVoltag: TLabel
+      object LblBuiltinVoltage: TLabel
         AnchorSideTop.Control = TxtBuiltinVoltage
-        AnchorSideRight.Control = LblEMax
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = TxtBuiltinVoltage
         Left = 123
         Height = 15
         Top = 59
@@ -460,6 +459,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
+        BorderSpacing.Right = 12
         Caption = 'Built-in voltage'
         FocusControl = TxtBuiltinVoltage
         ParentColor = False
@@ -496,7 +496,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       end
       object LblDepletionWidth: TLabel
         AnchorSideTop.Control = TxtDepletionWidth
-        AnchorSideRight.Control = LblEMax
+        AnchorSideRight.Control = LblBuiltinVoltage
         AnchorSideRight.Side = asrBottom
         Left = 120
         Height = 15
@@ -545,9 +545,9 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Text = 'nm'
         OnChange = UnitsChanged
       end
-      object LblBuiltinVoltag1: TLabel
+      object LblCapaPerArea: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
-        AnchorSideRight.Control = LblEMax
+        AnchorSideRight.Control = LblBuiltinVoltage
         AnchorSideRight.Side = asrBottom
         Left = 89
         Height = 15

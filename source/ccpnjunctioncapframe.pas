@@ -23,7 +23,7 @@ type
     CbDeltaConcUnits: TComboBox;
     EdNa: TEdit;
     CbTempUnits: TComboBox;
-    LblBuiltinVoltag1: TLabel;
+    LblCapaPerArea: TLabel;
     LblCapaPerAreaUnits: TLabel;
     Panel1: TPanel;
     TxtCapaPerArea: TEdit;
@@ -34,7 +34,7 @@ type
     CbNaUnits: TComboBox;
     EdVoltage: TFloatSpinEdit;
     LblEMax: TLabel;
-    LblBuiltinVoltag: TLabel;
+    LblBuiltinVoltage: TLabel;
     LblNa: TLabel;
     LblDepletionWidth: TLabel;
     LblNd: TLabel;
@@ -470,8 +470,8 @@ end;
 
 procedure TPNJunctionCapFrame.SetEditLeft(AValue: Integer);
 begin
-  TxtEMax.Left := CbMaterial.Left;
-  Panel1.Height := TxtCapaPerArea.Top + TxtCapaPerArea.Height + TxtEMax.Top;
+  TxtEMax.BorderSpacing.Left := CbMaterial.Left;
+  Panel1.AutoSize := true;
   Width := CbTempUnits.Left + CbTempUnits.Width + 30;
 end;
 

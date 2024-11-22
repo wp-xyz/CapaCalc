@@ -491,14 +491,14 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       end
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
-        AnchorSideRight.Control = TxtCapa
+        AnchorSideRight.Control = LblCapaPerLength
+        AnchorSideRight.Side = asrBottom
         Left = 64
         Height = 15
         Top = 24
         Width = 84
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
-        BorderSpacing.Right = 12
         Caption = 'Capacitance (C)'
         Font.Style = [fsBold]
         ParentColor = False
@@ -506,14 +506,14 @@ inherited CylPlaneCapFrame: TCylPlaneCapFrame
       end
       object LblCapaPerLength: TLabel
         AnchorSideTop.Control = TxtCapaPerLength
-        AnchorSideRight.Control = LblCapa
-        AnchorSideRight.Side = asrBottom
+        AnchorSideRight.Control = TxtCapaPerLength
         Left = 21
         Height = 15
         Top = 55
         Width = 127
         Anchors = [akTop, akRight]
         BorderSpacing.Top = 4
+        BorderSpacing.Right = 12
         Caption = 'Capacitance per length'
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]

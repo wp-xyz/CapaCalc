@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, ccManyCapFrame;
 
 type
-  TSeriesCapFrame = class(TManycapFrame)
+  TSeriesCapFrame = class(TManyCapFrame)
   private
 
   protected

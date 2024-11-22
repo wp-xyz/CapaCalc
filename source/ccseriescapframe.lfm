@@ -10,8 +10,8 @@ inherited SeriesCapFrame: TSeriesCapFrame
     ClientHeight = 381
     inherited EquationImage: TImage
       Left = 10
-      Height = 37
-      Top = 334
+      Height = 71
+      Top = 300
       Width = 260
       AutoSize = True
       BorderSpacing.Around = 8
@@ -34,10 +34,10 @@ inherited SeriesCapFrame: TSeriesCapFrame
       }
     end
     inherited ImageBevel: TBevel
-      Top = 323
+      Top = 289
     end
     inherited GeometryImage: TImage
-      Height = 321
+      Height = 287
       Picture.Data = {
         1754506F727461626C654E6574776F726B477261706869636801000089504E47
         0D0A1A0A0000000D49484452000000A90000005A040300000031FD6BAB000000

@@ -13,6 +13,7 @@ type
   { TManyCapFrame }
 
   TManyCapFrame = class(TBaseFrame)
+    Bevel2: TBevel;
     Bevel3: TBevel;
     BtnClear: TButton;
     EdC1: TEdit;
@@ -141,9 +142,9 @@ begin
   if AValue = FEditLeft then exit;
   FEditLeft := AValue;
   EdC1.Left := FEditLeft;
-  TxtCapa.Left := FEditLeft;
+  Bevel2.BorderSpacing.Left := FEditLeft;
   TxtCapa.Width := EdC1.Width;
-  Panel1.Height := TxtCapa.Top + TxtCapa.Height + TxtCapa.Top;
+  Panel1.AutoSize := true;
 end;
 
 

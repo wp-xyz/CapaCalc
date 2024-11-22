@@ -282,7 +282,7 @@ inherited ManyCapFrame: TManyCapFrame
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
         AnchorSideRight.Control = TxtCapa
-        Left = 83
+        Left = 76
         Height = 15
         Top = 24
         Width = 113
@@ -296,9 +296,10 @@ inherited ManyCapFrame: TManyCapFrame
         ParentFont = False
       end
       object TxtCapa: TEdit
+        AnchorSideLeft.Control = Bevel2
         AnchorSideTop.Control = Bevel3
         AnchorSideBottom.Side = asrBottom
-        Left = 208
+        Left = 201
         Height = 23
         Top = 20
         Width = 88
@@ -316,7 +317,7 @@ inherited ManyCapFrame: TManyCapFrame
         AnchorSideTop.Control = TxtCapa
         AnchorSideTop.Side = asrCenter
         AnchorSideBottom.Side = asrBottom
-        Left = 296
+        Left = 289
         Height = 30
         Top = 16
         Width = 17
@@ -334,6 +335,13 @@ inherited ManyCapFrame: TManyCapFrame
         BorderSpacing.Left = 16
         BorderSpacing.Right = 16
         Shape = bsTopLine
+      end
+      object Bevel2: TBevel
+        Left = 201
+        Height = 8
+        Top = 7
+        Width = 25
+        Shape = bsSpacer
       end
     end
   end
