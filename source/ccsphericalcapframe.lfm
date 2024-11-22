@@ -130,13 +130,13 @@ inherited SphericalCapFrame: TSphericalCapFrame
     ClientWidth = 396
     object LblRadiusA: TLabel[0]
       AnchorSideTop.Control = EdRadiusA
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = EdRadiusA
       Left = 69
       Height = 15
       Top = 30
       Width = 79
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Inner radius (a)'
       FocusControl = EdRadiusA
@@ -156,6 +156,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
     end
     object LblRadiusB: TLabel[2]
       AnchorSideTop.Control = EdRadiusB
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblRadiusA
       AnchorSideRight.Side = asrBottom
       Left = 65
@@ -163,7 +164,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Top = 61
       Width = 83
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Outer radius (b)'
       FocusControl = EdRadiusB
       ParentColor = False
@@ -187,6 +187,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
     end
     object LblEps: TLabel[4]
       AnchorSideTop.Control = EdEps
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblRadiusA
       AnchorSideRight.Side = asrBottom
       Left = 33
@@ -194,7 +195,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
       Top = 92
       Width = 115
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Dielectric constant (k)'
       FocusControl = EdEps
       ParentColor = False
@@ -348,13 +348,13 @@ inherited SphericalCapFrame: TSphericalCapFrame
       end
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtCapa
         Left = 104
         Height = 15
         Top = 57
         Width = 84
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Capacitance (C)'
         FocusControl = TxtCapa
@@ -364,6 +364,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
       end
       object LblCapaPerArea: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 73
@@ -371,7 +372,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Top = 88
         Width = 115
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
@@ -412,6 +412,7 @@ inherited SphericalCapFrame: TSphericalCapFrame
       end
       object LblArea: TLabel
         AnchorSideTop.Control = TxtArea
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 164
@@ -419,7 +420,6 @@ inherited SphericalCapFrame: TSphericalCapFrame
         Top = 26
         Width = 24
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Area'
         FocusControl = TxtArea
         ParentColor = False

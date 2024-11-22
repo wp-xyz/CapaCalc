@@ -586,13 +586,16 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       Top = 119
     end
     inherited Panel1: TPanel
-      Height = 158
-      Top = 204
+      Height = 178
+      Top = 184
       Width = 399
-      ClientHeight = 158
+      ClientHeight = 178
       ClientWidth = 399
       inherited LblCapa: TLabel
         AnchorSideLeft.Side = asrBottom
+      end
+      inherited TxtCapaPerArea: TEdit
+        BorderSpacing.Bottom = 8
       end
       inherited LblArea: TLabel
         BorderSpacing.Left = 200
@@ -612,7 +615,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         Width = 88
         Alignment = taRightJustify
         Anchors = [akTop, akLeft, akRight]
-        BorderSpacing.Top = 8
         BorderSpacing.Bottom = 20
         Font.Style = [fsBold]
         ParentFont = False
@@ -634,6 +636,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       end
       object LblCapaPerLength: TLabel[12]
         AnchorSideTop.Control = TxtCapaPerLength
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 61
@@ -642,7 +645,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
         Width = 127
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Capacitance per length'
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]
@@ -652,6 +654,7 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
     end
     object LblLength: TLabel[9]
       AnchorSideTop.Control = EdLength
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblRadiusA
       AnchorSideRight.Side = asrBottom
       Left = 94
@@ -660,7 +663,6 @@ inherited CylindricalCapFrame: TCylindricalCapFrame
       Width = 54
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Length (L)'
       FocusControl = EdLength
       ParentColor = False

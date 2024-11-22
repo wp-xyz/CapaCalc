@@ -74,7 +74,7 @@ begin
     fa := AreaFactor[TAreaUnits(CbAreaUnits.ItemIndex)];
     fc := CapaFactor[TCapaUnits(CbCapaUnits.ItemIndex)];
 
-    A := pi * (ra + rb) * L;          // Why not (ra + rb)/2 ?
+    A := pi * (ra + rb) * L;
     Capa := TwoPi * eps0 * eps * L / ln(rb / ra);
 
     if CbCapaUnits.Text='F' then

@@ -63,6 +63,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblMaterial: TLabel[2]
       AnchorSideTop.Control = CbMaterial
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = CbMaterial
       Left = 161
       Height = 15
@@ -70,7 +71,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 43
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Material'
       FocusControl = CbMaterial
@@ -78,6 +78,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblTemp: TLabel[3]
       AnchorSideTop.Control = EdTemp
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = EdTemp
       Left = 466
       Height = 15
@@ -85,7 +86,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 66
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Temperature'
       FocusControl = EdTemp
@@ -113,6 +113,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblJctType: TLabel[5]
       AnchorSideTop.Control = CbJctType
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblMaterial
       AnchorSideRight.Side = asrBottom
       Left = 133
@@ -121,7 +122,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 71
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Junction type'
       FocusControl = CbJctType
       ParentColor = False
@@ -151,6 +151,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblVoltage: TLabel[7]
       AnchorSideTop.Control = EdVoltage
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblTemp
       AnchorSideRight.Side = asrBottom
       Left = 449
@@ -159,7 +160,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 83
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Applied voltage'
       FocusControl = EdVoltage
       ParentColor = False
@@ -187,6 +187,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     object LblVoltageUnits: TLabel[9]
       AnchorSideLeft.Control = CbTempUnits
       AnchorSideTop.Control = LblVoltage
+      AnchorSideTop.Side = asrCenter
       Left = 648
       Height = 15
       Top = 61
@@ -197,6 +198,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblNa: TLabel[10]
       AnchorSideTop.Control = EdNa
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblMaterial
       AnchorSideRight.Side = asrBottom
       Left = 53
@@ -205,7 +207,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 151
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Acceptor concentration (Na)'
       FocusControl = EdNa
       ParentColor = False
@@ -252,6 +253,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblNd: TLabel[13]
       AnchorSideTop.Control = EdNd
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblMaterial
       AnchorSideRight.Side = asrBottom
       Left = 67
@@ -260,7 +262,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 137
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Donor concentration (Nd)'
       FocusControl = EdNd
       ParentColor = False
@@ -307,6 +308,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
     end
     object LblDeltaConc: TLabel[16]
       AnchorSideTop.Control = EdDeltaConc
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblMaterial
       AnchorSideRight.Side = asrBottom
       Left = 43
@@ -315,7 +317,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       Width = 161
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Dopand concentration change'
       FocusControl = EdDeltaConc
       ParentColor = False
@@ -367,6 +368,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       AnchorSideLeft.Control = CbMaterial
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = LblDeltaConc
+      AnchorSideTop.Side = asrCenter
       Left = 416
       Height = 15
       Top = 154
@@ -399,6 +401,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       end
       object LblEMax: TLabel
         AnchorSideTop.Control = TxtEMax
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblBuiltinVoltage
         AnchorSideRight.Side = asrBottom
         Left = 123
@@ -407,7 +410,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 81
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Maximum field'
         FocusControl = TxtEMax
         ParentColor = False
@@ -451,6 +453,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       end
       object LblBuiltinVoltage: TLabel
         AnchorSideTop.Control = TxtBuiltinVoltage
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtBuiltinVoltage
         Left = 123
         Height = 15
@@ -458,7 +461,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 81
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Built-in voltage'
         FocusControl = TxtBuiltinVoltage
@@ -485,17 +487,18 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       object LblBuiltinVoltageUnits: TLabel
         AnchorSideLeft.Control = CbEMaxUnits
         AnchorSideTop.Control = TxtBuiltinVoltage
+        AnchorSideTop.Side = asrCenter
         Left = 332
         Height = 15
         Top = 59
         Width = 7
-        BorderSpacing.Top = 4
         Caption = 'V'
         FocusControl = EdVoltage
         ParentColor = False
       end
       object LblDepletionWidth: TLabel
         AnchorSideTop.Control = TxtDepletionWidth
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblBuiltinVoltage
         AnchorSideRight.Side = asrBottom
         Left = 120
@@ -504,7 +507,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 84
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Depletion width'
         FocusControl = TxtDepletionWidth
         ParentColor = False
@@ -547,6 +549,7 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       end
       object LblCapaPerArea: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblBuiltinVoltage
         AnchorSideRight.Side = asrBottom
         Left = 89
@@ -555,7 +558,6 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
         Width = 115
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
@@ -584,11 +586,11 @@ inherited PNJunctionCapFrame: TPNJunctionCapFrame
       object LblCapaPerAreaUnits: TLabel
         AnchorSideLeft.Control = CbEMaxUnits
         AnchorSideTop.Control = TxtCapaPerArea
+        AnchorSideTop.Side = asrCenter
         Left = 332
         Height = 15
         Top = 121
         Width = 39
-        BorderSpacing.Top = 4
         Caption = 'nF/cm²'
         FocusControl = EdVoltage
         ParentColor = False

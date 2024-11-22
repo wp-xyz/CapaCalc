@@ -172,21 +172,25 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       OnChange = DataChanged
     end
     inherited LblDist: TLabel
+      AnchorSideTop.Side = asrCenter
       Left = 77
       Width = 63
       Caption = 'Distance (d)'
     end
     inherited LblLength: TLabel
+      AnchorSideTop.Side = asrCenter
       Left = 29
       Width = 111
       Caption = 'Conductor length (L)'
     end
     inherited LblWidth: TLabel
+      AnchorSideTop.Side = asrCenter
       Left = 32
       Width = 108
       Caption = 'Conductor width (B)'
     end
     inherited LblEps: TLabel
+      AnchorSideTop.Side = asrCenter
       Left = 25
       Top = 154
     end
@@ -214,6 +218,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         Width = 322
       end
       inherited LblArea: TLabel
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtArea
         AnchorSideRight.Side = asrTop
         Left = 132
@@ -240,6 +245,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         Visible = False
       end
       inherited LblCapa: TLabel
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapaPerLength
         AnchorSideRight.Side = asrBottom
         Left = 72
@@ -261,6 +267,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         OnChange = UnitsChanged
       end
       inherited LblCapaPerArea: TLabel
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtCapaPerArea
         AnchorSideRight.Side = asrTop
         Left = 41
@@ -279,6 +286,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
         Visible = False
       end
       inherited LblCapaPerLength: TLabel
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtCapaPerLength
         AnchorSideRight.Side = asrTop
         Left = 29
@@ -310,6 +318,7 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
     end
     object LblHeight: TLabel[12]
       AnchorSideTop.Control = EdHeight
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblDist
       AnchorSideRight.Side = asrBottom
       Left = 26
@@ -318,7 +327,6 @@ inherited LinePlaneCapFrame: TLinePlaneCapFrame
       Width = 114
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Conductor height (H)'
       FocusControl = EdHeight
       ParentColor = False

@@ -354,13 +354,13 @@ inherited PlanarCapFrame: TPlanarCapFrame
     end
     object LblDist: TLabel[4]
       AnchorSideTop.Control = EdDist
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = EdDist
       Left = 57
       Height = 15
       Top = 30
       Width = 91
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'Plate distance (d)'
       FocusControl = EdDist
@@ -368,6 +368,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
     end
     object LblLength: TLabel[5]
       AnchorSideTop.Control = EdLength
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblDist
       AnchorSideRight.Side = asrBottom
       Left = 68
@@ -375,13 +376,13 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Top = 61
       Width = 80
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Plate length (L)'
       FocusControl = EdLength
       ParentColor = False
     end
     object LblWidth: TLabel[6]
       AnchorSideTop.Control = EdWidth
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblDist
       AnchorSideRight.Side = asrBottom
       Left = 71
@@ -389,13 +390,13 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Top = 92
       Width = 77
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Plate width (B)'
       FocusControl = EdWidth
       ParentColor = False
     end
     object LblEps: TLabel[7]
       AnchorSideTop.Control = EdEps
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblDist
       AnchorSideRight.Side = asrBottom
       Left = 33
@@ -403,7 +404,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
       Top = 123
       Width = 115
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'Dielectric constant (k)'
       FocusControl = EdEps
       ParentColor = False
@@ -493,6 +493,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
       end
       object LblArea: TLabel
         AnchorSideTop.Control = TxtArea
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 124
@@ -542,13 +543,13 @@ inherited PlanarCapFrame: TPlanarCapFrame
       end
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtCapa
         Left = 64
         Height = 15
         Top = 57
         Width = 84
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Capacitance (C)'
         FocusControl = TxtCapa
@@ -599,6 +600,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
       end
       object LblCapaPerArea: TLabel
         AnchorSideTop.Control = TxtCapaPerArea
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 33
@@ -606,7 +608,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Top = 88
         Width = 115
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Capacitance per area'
         FocusControl = TxtCapaPerArea
         Font.Style = [fsBold]
@@ -631,6 +632,7 @@ inherited PlanarCapFrame: TPlanarCapFrame
       end
       object LblCapaPerLength: TLabel
         AnchorSideTop.Control = TxtCapaPerLength
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = LblCapa
         AnchorSideRight.Side = asrBottom
         Left = 21
@@ -638,7 +640,6 @@ inherited PlanarCapFrame: TPlanarCapFrame
         Top = 119
         Width = 127
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         Caption = 'Capacitance per length'
         FocusControl = TxtCapaPerLength
         Font.Style = [fsBold]

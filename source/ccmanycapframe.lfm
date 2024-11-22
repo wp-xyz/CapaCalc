@@ -38,13 +38,13 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC1: TLabel[1]
       AnchorSideTop.Control = EdC1
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = EdC1
       Left = 134
       Height = 15
       Top = 30
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       BorderSpacing.Right = 12
       Caption = 'C1'
       ParentColor = False
@@ -53,17 +53,18 @@ inherited ManyCapFrame: TManyCapFrame
       AnchorSideLeft.Control = EdC1
       AnchorSideLeft.Side = asrBottom
       AnchorSideTop.Control = EdC1
+      AnchorSideTop.Side = asrCenter
       Left = 260
       Height = 15
       Top = 30
       Width = 61
       BorderSpacing.Left = 12
-      BorderSpacing.Top = 4
       Caption = 'Same units!'
       ParentColor = False
     end
     object LblC2: TLabel[3]
       AnchorSideTop.Control = EdC2
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -71,7 +72,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 61
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C2'
       ParentColor = False
     end
@@ -92,6 +92,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC3: TLabel[5]
       AnchorSideTop.Control = EdC3
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -99,7 +100,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 92
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C3'
       ParentColor = False
     end
@@ -120,6 +120,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC4: TLabel[7]
       AnchorSideTop.Control = EdC4
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -127,7 +128,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 123
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C4'
       ParentColor = False
     end
@@ -148,6 +148,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC5: TLabel[9]
       AnchorSideTop.Control = EdC5
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -155,7 +156,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 154
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C5'
       ParentColor = False
     end
@@ -176,6 +176,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC6: TLabel[11]
       AnchorSideTop.Control = EdC6
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -183,7 +184,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 185
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C6'
       ParentColor = False
     end
@@ -204,6 +204,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC7: TLabel[13]
       AnchorSideTop.Control = EdC7
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -211,7 +212,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 216
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C7'
       ParentColor = False
     end
@@ -232,6 +232,7 @@ inherited ManyCapFrame: TManyCapFrame
     end
     object LblC8: TLabel[15]
       AnchorSideTop.Control = EdC8
+      AnchorSideTop.Side = asrCenter
       AnchorSideRight.Control = LblC1
       AnchorSideRight.Side = asrBottom
       Left = 134
@@ -239,7 +240,6 @@ inherited ManyCapFrame: TManyCapFrame
       Top = 247
       Width = 14
       Anchors = [akTop, akRight]
-      BorderSpacing.Top = 4
       Caption = 'C8'
       ParentColor = False
     end
@@ -281,13 +281,13 @@ inherited ManyCapFrame: TManyCapFrame
       TabOrder = 9
       object LblCapa: TLabel
         AnchorSideTop.Control = TxtCapa
+        AnchorSideTop.Side = asrCenter
         AnchorSideRight.Control = TxtCapa
         Left = 76
         Height = 15
         Top = 24
         Width = 113
         Anchors = [akTop, akRight]
-        BorderSpacing.Top = 4
         BorderSpacing.Right = 12
         Caption = 'Total capacitance (C)'
         FocusControl = TxtCapa
