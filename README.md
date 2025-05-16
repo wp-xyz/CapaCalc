@@ -269,7 +269,9 @@ CapaCalc provides detailed calculations for the following conductor arrangements
     *   Total capacitance (C) [Code variable: `capa` in `TManyCapFrame`]
     *   The number of decimal places for the output can be adjusted using an up/down control.
 *   **Formula:** The total capacitance $C_{total}$ for $n$ capacitors connected in series is calculated using the reciprocal of the sum of the reciprocals of individual capacitances:
-    $$ \frac{1}{C_{total}} = \sum_{i=1}^{n} \frac{1}{C_i} \quad \implies \quad C_{total} = \frac{1}{\sum_{i=1}^{n} \frac{1}{C_i}} $$
+
+$$ \frac{1}{C_{total}} = \sum_{i=1}^{n} \frac{1}{C_i} \quad \implies \quad C_{total} = \frac{1}{\sum_{i=1}^{n} \frac{1}{C_i}} $$
+    
 *   **Validation (`TManyCapFrame.ValidData`):** Any non-empty input fields must contain positive numbers.
 *   **Real-World Idea:** Analyzing voltage division across capacitors in AC circuits, or calculating the effective capacitance of components fabricated on different layers in microelectronics.
 
