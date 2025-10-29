@@ -3,9 +3,10 @@ program CapaCalc;
 {$mode objfpc}{$H+}
 
 uses
-  {$IFDEF UNIX}{$IFDEF UseCThreads}
-  cthreads,
-  {$ENDIF}{$ENDIF}
+ {$IFDEF UNIX}
+  {$IFDEF UseCThreads}cthreads,{$ENDIF}
+  clocale,
+ {$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, ccMain, ccBaseFrame, ccPlanarCapFrame, ccGlobal, ccStrings,
   ccSphericalCapFrame, ccCylindricalCapFrame, ccPNJunctionCapFrame,
